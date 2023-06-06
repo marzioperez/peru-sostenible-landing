@@ -1,0 +1,313 @@
+button{
+    @apply focus:outline-none;
+}
+
+.btn{
+    @apply inline-flex justify-center px-5 py-3 text-sm h-9 items-center shadow-sm rounded-lg cursor-pointer transition duration-200;
+}
+
+.btn i{
+    @apply text-base transition duration-200 leading-none ml-[10px];
+}
+
+.btn.icon-left i {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+/* Extra small buttons */
+.btn-xs {
+    @apply px-5 py-3 text-xs h-8;
+}
+
+.btn-xs i{
+    @apply text-xs ml-3;
+}
+
+.btn-xs.icon-left i {
+    @apply mr-3 ml-0;
+}
+
+/* Small buttons */
+.btn-sm {
+    @apply px-7 py-4 text-sm h-9;
+}
+
+.btn-sm i{
+    @apply text-sm ml-3;
+}
+
+.btn-sm.icon-left i {
+    @apply mr-3 ml-0;
+}
+
+/* Large buttons */
+.btn-xl{
+    @apply px-9 py-6 sm:text-base sm:h-11 h-10 text-sm;
+}
+
+.btn-xl i {
+    @apply text-md ml-4;
+}
+
+.btn-xl.icon-left i {
+    @apply mr-4 ml-0;
+}
+
+/* Default */
+.btn-primary {
+    @apply bg-primary border-transparent text-white hover:border-transparent hover:bg-primary-dark;
+}
+
+.btn-primary i{
+    @apply text-primary-lightest;
+}
+
+.btn-primary:hover i {
+    @apply text-white;
+}
+
+/* Default light */
+.btn-primary-light {
+    @apply border-transparent bg-primary-light text-white hover:border-transparent hover:bg-primary-dark;
+}
+
+.btn-primary-light i{
+    @apply text-primary-lightest;
+}
+
+.btn-primary-light:hover i {
+    @apply text-white;
+}
+
+/* Red */
+.btn-red {
+    @apply border-transparent bg-red text-white hover:border-transparent hover:bg-red-dark;
+}
+
+/* Danger */
+.btn-danger {
+    @apply border-transparent bg-danger text-white hover:border-transparent hover:bg-danger-dark;
+}
+
+.btn-danger i {
+    @apply text-danger-lightest;
+}
+
+.btn-danger:hover i {
+    @apply text-white;
+}
+
+/* Gray */
+.btn-gray {
+    @apply border-transparent bg-gray-100 text-gray hover:border-transparent hover:bg-gray-200;
+}
+
+.btn-gray i {
+    @apply text-gray-500;
+}
+
+.btn-gray:hover i {
+    @apply text-gray-700;
+}
+
+/* White */
+.btn-white {
+    @apply border border-gray-300 text-gray bg-white hover:border-gray-700;
+}
+
+.btn-white i {
+    @apply text-gray-500;
+}
+
+.btn-white:hover i {
+    @apply text-gray-700;
+}
+
+/* Blur */
+.btn-blur {
+    @apply border-transparent bg-white/[.85] backdrop-blur-md text-gray hover:border-gray-700 hover:bg-white/[.95];
+}
+
+.btn-blur i {
+    @apply text-gray-500;
+}
+
+.btn-blur:hover i {
+    @apply text-gray-700;
+}
+
+/* Dark */
+.btn-dark{
+    @apply border-transparent bg-gray-dark text-white hover:bg-gray;
+}
+
+.btn-dark i {
+    @apply text-white;
+}
+
+.btn-dark:hover i {
+    @apply text-white;
+}
+
+/* Information */
+.btn-information{
+    @apply border-transparent bg-info text-white hover:bg-info-dark;
+}
+
+.btn-information i {
+    @apply text-white;
+}
+
+.btn-information:hover i {
+    @apply text-white;
+}
+
+/* Outline buttons */
+.btn-primary-outline {
+    @apply border border-primary bg-white shadow-sm text-primary;
+}
+
+.btn-primary-outline:hover {
+    @apply bg-primary-dark text-white;
+}
+
+.btn-red-outline {
+    @apply border-2 font-bold border-red bg-white shadow-sm text-red;
+}
+
+.btn-red-outline:hover {
+    @apply bg-red text-white;
+}
+
+.btn-primary-light-outline {
+    @apply border border-primary-light bg-white shadow-sm text-primary-light;
+}
+
+.btn-primary-light-outline:hover {
+    @apply bg-primary-dark text-white;
+}
+
+.btn-primary-lightest-outline {
+    @apply border border-primary-lightest bg-white shadow-sm text-primary-lightest;
+}
+
+.btn-primary-lightest-outline:hover {
+    @apply bg-primary-light text-white;
+}
+
+.btn-info-outline {
+    @apply border border-info bg-white shadow-sm text-info;
+}
+
+.btn-info-outline:hover {
+    @apply border-info-dark text-info-dark;
+}
+
+.btn-danger-outline{
+    @apply border border-danger text-danger bg-transparent hover:border-danger-dark hover:text-danger-dark;
+}
+
+.btn-warning-outline{
+    @apply border border-warning text-warning bg-transparent hover:border-warning-dark hover:text-warning-dark;
+}
+
+.btn-dark-outline{
+    @apply border border-gray-400 text-gray bg-transparent hover:border-gray-700;
+}
+
+/* Only icon buttons */
+.btn-only-icon {
+    min-width: theme('spacing.10');
+    @apply px-5;
+}
+
+.btn-only-icon.btn-sm {
+    @apply px-3;
+}
+
+.btn-only-icon i {
+    margin-left: 0;
+}
+
+/* Btn transparent */
+.btn-transparent{
+    @apply border-0 shadow-none !important;
+}
+
+.btn-transparent.btn-only-icon, .btn-transparent.btn-only-icon i{
+    @apply text-lg;
+}
+
+/* Btn link*/
+.btn-link{
+    @apply text-gray-500 transition duration-200 hover:text-gray font-semibold inline-flex items-center;
+}
+
+.btn-link i{
+    @apply text-base transition duration-200 text-gray-400 leading-none ml-[10px];
+}
+
+.btn-link:hover i{
+    @apply text-gray;
+}
+
+.btn-link.icon-left i{
+    @apply ml-0 mr-[10px];
+}
+
+/* Helpers */
+.btn:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.whats-app-btn {
+    @apply fixed bg-[#26A619] rounded-full;
+}
+
+.whats-app-btn.btn-1 {
+    @apply right-5 sm:bottom-15 bottom-14;
+}
+
+.whats-app-btn.btn-2 {
+    @apply right-5 bottom-5;
+}
+
+.whats-app-btn .icon {
+    @apply sm:h-11 sm:w-11 h-10 w-10 shadow-md;
+}
+
+.whats-app-btn .icon .icon-inner {
+    @apply absolute w-full h-full p-4 top-0 right-0 bg-cover bg-no-repeat rounded-full border-none z-20 shadow-md bg-[#26A619];
+}
+
+.whats-app-btn .whats-app-text {
+    transition: all .25s ease-out;
+    @apply absolute bg-[#26A619] text-sm top-0 right-0 sm:h-11 sm:w-11 h-10 w-10 text-left pl-5 rounded-full text-white shadow-sm opacity-0 flex items-center;
+}
+
+.whats-app-btn:hover .whats-app-text {
+    @apply opacity-100 w-[210px];
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}

@@ -1,0 +1,290 @@
+/*///// Change Autocomplete styles in Chrome /////*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    @apply border-gray-200 bg-transparent !important
+}
+
+select {
+    @apply block w-full transition duration-75 shadow-sm outline-none focus:ring-1 focus:ring-inset disabled:opacity-70;
+}
+
+/*///// Placeholder /////*/
+
+::-webkit-input-placeholder {
+    text-transform: none;
+}
+
+::-moz-placeholder {
+    text-transform: none;
+}
+
+:-ms-input-placeholder {
+    text-transform: none;
+}
+
+:-moz-placeholder {
+    text-transform: none;
+}
+
+
+
+/*///// General /////*/
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select,
+textarea{
+    @apply block w-full px-3 text-gray text-sm rounded-md border border-primary shadow-sm transition h-8 focus:border-primary-light focus:ring-0 focus:outline-none;
+}
+
+textarea{
+    @apply p-6 h-14;
+}
+
+input.sm{
+    @apply h-9;
+}
+
+input:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.form-group {
+    @apply mb-5;
+}
+
+.form-group.with-counter{
+    @apply relative;
+}
+
+.form-help {
+    line-height: 16px;
+    @apply mt-4 text-xs text-gray-600 block;
+}
+
+.form-counter{
+    line-height: 16px;
+    @apply text-[11px] text-gray-500 block pointer-events-none absolute right-4 bottom-4;
+}
+
+.form-label {
+    @apply text-xs block mb-1 font-medium text-primary uppercase;
+}
+
+.form-label small {
+    @apply font-normal;
+}
+
+.form-label .required {
+    @apply text-danger;
+}
+
+.form-label-right {
+    font-size: 11px;
+    @apply text-gray-600 mb-2;
+}
+
+.form-label-right a {
+    @apply text-gray-600 hover:text-gray hover:underline;
+}
+
+.form-error{
+    @apply text-danger font-medium text-xs mt-4 block leading-4;
+}
+
+.error-msg {
+    @apply text-danger text-xs font-medium mt-4 block leading-4;
+}
+
+
+
+/*///// Checkbox & Radio /////*/
+
+input[type='checkbox'],
+input[type='radio']{
+    @apply w-6 h-6 border border-gray-200 shadow-sm text-primary focus:ring-0 focus:ring-white focus:outline-none focus:outline-0;
+}
+
+input[type='checkbox']{
+    @apply rounded;
+}
+
+input[type='checkbox']:checked {
+    @apply border-primary bg-primary-lightest !important;
+    background-size: 14px auto;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 3.81331L15.2381 4.57522L6.60767 13.2056L5.84239 13.9709L5.08049 13.209L0.765276 8.8938L0 8.12853L1.52718 6.60135L2.28909 7.36325L5.84239 10.9166L13.7109 3.05141L14.4728 2.28613L16 3.81331Z' fill='%23187768'/%3E%3C/svg%3E%0A");
+}
+
+.is-checkbox{
+    @apply mb-5;
+}
+
+.is-checkbox label,
+.is-radio label {
+    @apply inline-flex items-start;
+}
+
+.is-checkbox span,
+.is-radio span{
+    line-height: 20px;
+    @apply ml-4 font-medium;
+}
+
+.is-checkbox p,
+.is-radio p{
+    @apply ml-4 font-medium;
+}
+
+.is-checkbox .form-help,
+.is-radio .form-help{
+    @apply font-normal text-xs ml-8 mt-2;
+}
+
+.is-checkbox span a,
+.is-radio span a{
+    @apply underline text-gray-600 hover:text-gray inline-block;
+}
+
+
+
+/*///// Lateral input (.form-group > .input-lateral) /////*/
+
+.input-lateral{
+    @apply flex shadow-sm relative items-center;
+}
+
+.input-lateral > span{
+    @apply inline-flex h-10 items-center px-5 rounded-l-md border border-r-0 border-gray-200 bg-gray-100 text-gray-700;
+}
+
+.input-lateral input{
+    @apply flex-1 rounded-l-none shadow-none;
+}
+
+
+
+/*///// Select item /////*/
+.items-selector{
+    @apply grid grid-cols-2 gap-5 mb-8;
+}
+
+.items-selector .select-item{
+    @apply border-solid border rounded-md py-8 px-9 relative flex items-center justify-center flex-col shadow-sm text-center cursor-pointer transition;
+}
+
+.select-item-title{
+    @apply font-semibold text-gray-700 mb-3 transition;
+}
+
+.select-item-description{
+    @apply text-xs text-gray-500 transition;
+}
+
+.items-selector .select-item.active{
+    @apply border-info bg-info-lightest border-2;
+}
+
+.items-selector .select-item.active .select-item-title,
+.items-selector .select-item.active .select-item-description{
+    @apply text-gray;
+}
+
+
+
+/*///// Otros /////*/
+
+.otp-input {
+    @apply w-12 h-14 mr-4 text-4xl !important;
+}
+
+.otp-input.otp-big {
+    @apply w-full h-14 mr-4 text-4xl !important;
+}
+
+.vue-tags-input {
+    @apply max-w-full !important;
+}
+
+.vue-tags-input .ti-input {
+    @apply block w-full px-6 text-gray text-sm rounded-md border border-gray-200 shadow-sm transition focus:border-gray-400 focus:ring-0 focus:outline-none !important;
+}
+
+.vue-tags-input .ti-input .ti-tags .ti-new-tag-input-wrapper {
+    @apply p-0 !important;
+}
+
+.vue-tags-input .ti-input .ti-tags .ti-new-tag-input-wrapper input {
+    @apply h-8 shadow-none !important;
+}
+
+.vue-tags-input .ti-autocomplete {
+    @apply border-gray-200 shadow-sm rounded-b-md !important;
+}
+
+.vue-tags-input .ti-autocomplete ul {
+    @apply h-17 overflow-y-scroll;
+}
+
+.vue-tags-input .ti-autocomplete li div {
+    @apply h-9 px-6 flex items-center py-0 !important;
+}
+
+.vue-tags-input .ti-autocomplete li.ti-selected-item {
+    @apply bg-gray-100 text-gray !important;
+}
+
+.vue-tags-input .ti-input .ti-tags .ti-tag {
+    @apply bg-gray-100 text-gray px-3 py-2 rounded-md font-medium text-sm !important;
+}
+
+.vue-tags-input .ti-input .ti-tags .ti-tag .ti-actions {
+    @apply ml-3 text-base text-gray-400 !important;
+}
+
+.group-selector{
+    @apply flex only-sm:flex-col justify-between items-center gap-4 my-4;
+}
+
+.group-selector .active .btn, .group-selector .active .group-input{
+    @apply border-primary bg-primary-lightest !important;
+}
+
+
+
+.group-selector .item-selector{
+    @apply relative w-full;
+}
+
+.group-selector .item-selector .btn, .group-selector .item-selector .group-input{
+    @apply flex w-full h-14 justify-center items-center relative font-semibold text-center !important;
+}
+
+.group-selector .item-selector .item-check{
+    @apply absolute pointer-events-none left-6 top-[30px] w-6 h-6 rounded-full bg-gray-100 !important;
+}
+
+.group-selector .item-selector.active .item-check{
+    @apply bg-primary !important;
+}
+
+.group-selector .item-selector.active .item-check:before{
+    content: '';
+    @apply w-[18px] h-[18px] left-0 top-0 z-[1px] absolute ml-[1px] mt-[1px] bg-primary-lightest rounded-full;
+}
+
+.group-selector .item-selector.active .item-check:after{
+    content: '';
+    @apply w-3 h-3 left-0 top-0 z-[2px] absolute ml-[6px] mt-[6px] bg-primary rounded-full;
+}

@@ -1,0 +1,16 @@
+[class^='container'] {
+    max-width: calc(1296px + calc(theme('spacing.12') * 2));
+    @apply m-auto w-full sm:px-12 px-5;
+}
+
+.container-md {
+    max-width: calc(990px + calc(theme('spacing.12') * 2));
+}
+
+.container-sm {
+    max-width: calc(450px + calc(theme('spacing.12') * 2));
+}
+
+.container-xs, .content-500{
+    max-width: 500px;
+}

@@ -1,0 +1,7 @@
+.topbar {
+    @apply border-b border-white bg-primary-dark py-3 px-8 sm:block hidden;
+}
+
+header {
+    @apply bg-gradient-to-b from-primary-dark to-primary shadow-sm shadow-primary-dark sticky top-0 z-30 w-full py-3 px-8;
+}

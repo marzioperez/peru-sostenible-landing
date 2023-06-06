@@ -12,6 +12,12 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    const COMMITMENTS = [
+        'Resiliencia', 'Respeto', 'Tolerancia', 'Esfuerzo', 'Empatía',
+        'Transparencia', 'Sostenibilidad', 'Colaboración', 'Preservación',
+        'Conciencia', 'Innovación', 'Equilibrio'
+    ];
+
     /**
      * The attributes that are mass assignable.
      *

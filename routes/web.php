@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', \App\Http\Livewire\Event\Index::class);
+Route::get('/auth', \App\Http\Livewire\Auth\Index::class);
