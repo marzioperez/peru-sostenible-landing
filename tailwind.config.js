@@ -125,7 +125,8 @@ module.exports = {
                 'none': '0 0 #000'
             },
             fontFamily: {
-
+                maple: ['Maple'],
+                tiempos: ['Tiempos']
             },
             aspectRatio: {
                 none: 0,

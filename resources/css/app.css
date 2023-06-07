@@ -2,8 +2,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import "_common.css";
 @import "_layout.css";
 @import "_texts.css";
 @import "_header.css";
 @import "_buttons.css";
 @import "_forms.css";
+@import "_fonts.css";

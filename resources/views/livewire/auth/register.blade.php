@@ -1,5 +1,5 @@
 <div>
-    <p class="text-xl text-red">Regístrate</p>
+    <p class="text-xl text-red font-tiempos">Regístrate</p>
 
     <form wire:submit.prevent="process">
         <div class="w-full">
@@ -28,22 +28,33 @@
             </div>
 
             <div class="form-group">
-                <label for="linkedin" class="form-label">Empresa</label>
-                <input type="text" name="linkedin" id="linkedin" wire:model="linkedin" />
+                <label for="company" class="form-label">Empresa</label>
+                <input type="text" name="company" id="company" wire:model="company" />
             </div>
 
             <div class="form-group">
-                <p>¿Cuál es tu compromiso con el desarrollo sostenible?</p>
-                <p>Elegir más de una palabra</p>
-                <div class="grid grid-cols-4 gap-3">
+                <p class="mb-1 font-tiempos text-primary">¿Cuál es tu compromiso con el desarrollo sostenible?</p>
+                <p class="text-primary mb-2">Elegir más de una palabra</p>
+                <div class="grid grid-cols-4 gap-3 mb-2">
                     @foreach($commitments_options as $item)
-                        <button wire:click.prevent="setCommit('{{$item}}')" type="button" class="btn btn-{{(in_array($item, $commitments) ? 'primary-outline' : 'primary-lightest-outline')}}">{{$item}}</button>
+                        <button wire:click.prevent="setCommit('{{$item}}')" type="button" class="btn btn-{{(in_array($item, $commitments) ? 'primary' : 'primary-lightest-outline')}}">{{$item}}</button>
                     @endforeach
                 </div>
+                @if($error_commitments)
+                    <span class="text-xs text-danger">{{ $error_commitments }}</span>
+                @endif
+            </div>
+
+            <div class="mt-3 w-100">
+                <div class="form-check">
+                    <input type="checkbox" name="accept_terms" class="form-check-input" id="accept_terms" wire:model="accept_terms">
+                    <label class="form-check-label fs-12px" for="accept_terms" >Acepto los Términos y condiciones</label>
+                </div>
+                @error('accept_terms') <span class="text-danger fs-12px">{{ $message }}</span> @enderror
             </div>
 
             <div class="col-span-2 flex justify-center pt-3">
-                <button type="submit" class="btn btn-red-outline">Enviar</button>
+                <button type="submit" class="btn btn-red-outline uppercase">Enviar</button>
             </div>
         </div>
     </form>
