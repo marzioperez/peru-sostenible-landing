@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', \App\Http\Livewire\Event\Index::class)->name('home');
 Route::get('/auth', \App\Http\Livewire\Auth\Index::class)->name('auth');
+Route::get('/gracias', \App\Http\Livewire\Auth\Thanks::class)->name('thanks');

@@ -6,8 +6,7 @@
         @vite('resources/js/app.js')
         @livewireStyles
     </head>
-    <body>
-        @include('layouts.header')
+    <body class="sm:overflow-hidden">
         <main>
             {{ $slot }}
         </main>

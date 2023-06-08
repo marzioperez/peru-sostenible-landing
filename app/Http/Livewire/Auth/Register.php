@@ -3,6 +3,7 @@
 namespace App\Http\Livewire\Auth;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
 class Register extends Component {
@@ -37,7 +38,7 @@ class Register extends Component {
         }
 
         $this->validate();
-
+        $token = Hash::make(time());
         User::create([
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,
@@ -46,9 +47,10 @@ class Register extends Component {
             'email' => $this->email,
             'commitments' => $this->commitments,
             'password' => '123456',
+            'token' => $token
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('thanks', ['token' => $token]);
     }
 
     public function setCommit($type): void {

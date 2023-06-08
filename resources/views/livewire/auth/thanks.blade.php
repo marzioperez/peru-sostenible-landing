@@ -1,13 +1,12 @@
 <div>
-    <div class="relative">
-        <img src="{{\Illuminate\Support\Facades\Vite::asset('resources/img/banner-home.jpg')}}" class="w-full">
+    <div class="relative h-screen bg-gray-900">
+        <img src="{{\Illuminate\Support\Facades\Vite::asset('resources/img/banner-home.jpg')}}" class="w-full" alt="{{config('app.name')}}" />
         <div class="absolute w-full h-full top-0 lef-0 text-white flex items-center justify-center z-50">
-            <div>
-                <h3 class="sm:text-6xl text-lg leading-none mb-0 uppercase">Ya somos</h3>
-                <h1 class="sm:text-12xl text-xl font-bold leading-none uppercase mb-0">1,250</h1>
-                <p class="uppercase text-right sm:text-4xl text-md sm:-mt-7 sm:mb-3 mb-0">Inscritos</p>
-
-                
+            <div class="text-center">
+                <img src="{{\Illuminate\Support\Facades\Vite::asset('resources/img/logo-evento.svg')}}" class="w-full mb-6" />
+                <h2 class="text-xl font-bold leading-none uppercase">¡Gracias<br>por tu registro!</h2>
+                <p class="font-tiempos">Muy pronto más noticias sobre el evento</p>
+                <button class="btn btn-white-outline uppercase">Agenda el evento</button>
             </div>
         </div>
         <div class="absolute w-full bottom-0">

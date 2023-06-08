@@ -35,7 +35,7 @@
             <div class="form-group">
                 <p class="mb-1 font-tiempos text-primary">¿Cuál es tu compromiso con el desarrollo sostenible?</p>
                 <p class="text-primary mb-2">Elegir más de una palabra</p>
-                <div class="grid grid-cols-4 gap-3 mb-2">
+                <div class="grid sm:grid-cols-4 grid-cols-3 gap-3 mb-2">
                     @foreach($commitments_options as $item)
                         <button wire:click.prevent="setCommit('{{$item}}')" type="button" class="btn btn-{{(in_array($item, $commitments) ? 'primary' : 'primary-lightest-outline')}}">{{$item}}</button>
                     @endforeach

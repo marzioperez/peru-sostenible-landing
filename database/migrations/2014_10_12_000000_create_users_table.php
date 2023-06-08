@@ -21,6 +21,7 @@ return new class extends Migration
             $table->json('commitments')->nullable()->default(null);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('token')->nullable()->default(null);
             $table->rememberToken();
             $table->timestamps();
         });

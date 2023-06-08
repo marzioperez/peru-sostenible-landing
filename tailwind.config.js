@@ -66,6 +66,13 @@ module.exports = {
                 '3xl': '2rem', // 32px
                 '4xl': '2.5rem', // 40px
                 '5xl': '3rem', // 48px
+                '6xl': '4rem', // 64px
+                '7xl': '5rem', // 80px
+                '8xl': '6rem', // 96px
+                '9xl': '7rem', // 112px
+                '10xl': '8rem', // 128px
+                '11xl': '9rem', // 144px
+                '12xl': '10rem', // 160px
             },
             spacing: {
                 '0': '0',

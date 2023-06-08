@@ -31,6 +31,7 @@ class User extends Authenticatable
         'email',
         'commitments',
         'password',
+        'token'
     ];
 
     /**
@@ -53,4 +54,21 @@ class User extends Authenticatable
         'password' => 'hashed',
         'commitments' => 'array'
     ];
+
+    protected $appends = [
+        'initials',
+        'full_name',
+    ];
+
+    public function getInitialsAttribute() {
+        $name = $this->full_name;
+        $name_array = explode(' ', trim($name));
+        $firstWord = $name_array[0];
+        $lastWord = $name_array[count($name_array)-1];
+        return mb_substr($firstWord[0],0,1) . mb_substr($lastWord[0],0,1);
+    }
+
+    public function getFullNameAttribute() {
+        return html_entity_decode(trim($this->first_name . ' ' . $this->last_name));
+    }
 }

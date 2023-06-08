@@ -216,6 +216,10 @@ button{
     @apply border border-gray-400 text-gray bg-transparent hover:border-gray-700;
 }
 
+.btn-white-outline {
+    @apply border-2 border-white text-white bg-transparent hover:border-gray-100;
+}
+
 /* Only icon buttons */
 .btn-only-icon {
     min-width: theme('spacing.10');
