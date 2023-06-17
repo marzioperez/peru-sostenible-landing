@@ -1,6 +1,6 @@
 html,
 body {
-    @apply font-maple;
+    @apply font-maple bg-gray-100;
 }
 
 .waves {
@@ -21,4 +21,15 @@ body {
     100% {
         transform: translate3d(85px,0,0);
     }
+}
+
+.timer{
+    display:flex;
+}
+.timer h1 + h1:before{
+    content:":"
+}
+
+.splide__list {
+    @apply h-auto;
 }
