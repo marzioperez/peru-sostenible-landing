@@ -1,7 +1,11 @@
 header {
-    @apply fixed top-0 z-30 w-full py-3 px-8;
+    @apply fixed top-0 z-50 w-full py-3 px-8 transition-all;
 }
 
 header .logo {
     @apply sm:h-[55px];
+}
+
+header.header-fixed {
+    @apply bg-red
 }

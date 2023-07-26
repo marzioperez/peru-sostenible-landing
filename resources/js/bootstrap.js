@@ -3,16 +3,21 @@
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
-import Alpine from 'alpinejs';
-import {default as Splide} from "@splidejs/splide";
 import axios from 'axios';
+import jQuery from 'jquery';
+// import slick from 'slick-carousel';
+import Popper from 'popper.js';
 
-window.Splide = Splide;
-window.Alpine = Alpine;
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-Alpine.start();
+
+try {
+    window.Popper = Popper;
+    window.$ = window.jQuery = jQuery;
+    //window.slick = slick;
+} catch (e) {}
+
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

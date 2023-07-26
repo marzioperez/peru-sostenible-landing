@@ -266,52 +266,6 @@ button{
     pointer-events: none;
 }
 
-.whats-app-btn {
-    @apply fixed bg-[#26A619] rounded-full;
-}
-
-.whats-app-btn.btn-1 {
-    @apply right-5 sm:bottom-15 bottom-14;
-}
-
-.whats-app-btn.btn-2 {
-    @apply right-5 bottom-5;
-}
-
-.whats-app-btn .icon {
-    @apply sm:h-11 sm:w-11 h-10 w-10 shadow-md;
-}
-
-.whats-app-btn .icon .icon-inner {
-    @apply absolute w-full h-full p-4 top-0 right-0 bg-cover bg-no-repeat rounded-full border-none z-20 shadow-md bg-[#26A619];
-}
-
-.whats-app-btn .whats-app-text {
-    transition: all .25s ease-out;
-    @apply absolute bg-[#26A619] text-sm top-0 right-0 sm:h-11 sm:w-11 h-10 w-10 text-left pl-5 rounded-full text-white shadow-sm opacity-0 flex items-center;
-}
-
-.whats-app-btn:hover .whats-app-text {
-    @apply opacity-100 w-[210px];
-}
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
+.btn-social {
+    @apply border-2 rounded-lg text-white flex items-center justify-center text-2xl border-white p-3 w-10 h-10 hover:bg-white hover:text-primary;
 }

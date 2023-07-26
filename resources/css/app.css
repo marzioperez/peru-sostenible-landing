@@ -1,12 +1,13 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import '@splidejs/splide/dist/css/splide.min.css';
+@import "slick-carousel/slick/slick";
 
 @import "_common.css";
 @import "_layout.css";
 @import "_texts.css";
 @import "_header.css";
+@import "_footer.css";
 @import "_buttons.css";
 @import "_forms.css";
 @import "_fonts.css";
