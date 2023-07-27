@@ -8,6 +8,7 @@ use Livewire\Component;
 class Index extends Component {
 
     public $speakers;
+    public bool $show_words = false;
 
     public function mount() {
         $this->speakers = Speaker::all();

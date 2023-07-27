@@ -1,6 +1,39 @@
 html,
 body {
-    @apply font-maple bg-gray-100;
+    @apply font-maple bg-white;
+}
+
+.banner-content {
+    @apply relative mb-5 overflow-hidden;
+}
+
+.banner-words {
+    @apply w-full sm:h-[750px] h-[400px];
+    background: linear-gradient(90deg, #0C615D 0%, #0F399C 27.14%, #4C16A3 46.93%, #8A0A82 71.93%, #B4102D 100%);
+}
+
+.banner-words:after {
+    content: "";
+    @apply absolute h-3 bottom-0 bg-white w-full;
+}
+
+.banner-words .bg-banner-words {
+    @apply absolute top-0 left-0 w-full h-full bg-no-repeat bg-cover;
+}
+
+.banner-words .words {
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
+.banner-words .anychart-credits {
+    @apply hidden;
+}
+
+.banner-words svg path {
+    @apply fill-transparent;
 }
 
 .waves {
@@ -14,15 +47,6 @@ body {
     animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
 
-@keyframes move-forever {
-    0% {
-        transform: translate3d(-90px,0,0);
-    }
-    100% {
-        transform: translate3d(85px,0,0);
-    }
-}
-
 .timer{
     display:flex;
 }
@@ -32,4 +56,18 @@ body {
 
 .splide__list {
     @apply h-auto;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% {
+        transform: translate3d(85px,0,0);
+    }
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }

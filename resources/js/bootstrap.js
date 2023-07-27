@@ -7,6 +7,7 @@ import axios from 'axios';
 import jQuery from 'jquery';
 // import slick from 'slick-carousel';
 import Popper from 'popper.js';
+import anychart from 'anychart/dist/js/anychart-bundle.min';
 
 window.axios = axios;
 
@@ -14,6 +15,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 try {
     window.Popper = Popper;
+    window.anychart = anychart;
     window.$ = window.jQuery = jQuery;
     //window.slick = slick;
 } catch (e) {}
