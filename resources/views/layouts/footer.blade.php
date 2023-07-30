@@ -45,3 +45,6 @@
         </div>
     </div>
 </footer>
+<div class="py-3 text-center text-sm">
+    Web developed by Cien Pies Producciones
+</div>
