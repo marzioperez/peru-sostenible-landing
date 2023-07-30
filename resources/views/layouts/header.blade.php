@@ -10,13 +10,13 @@
             </div>
             <div class="flex justify-center">
                 <a href="{{route('home')}}">
-                    <img src="{{\Illuminate\Support\Facades\Vite::asset('resources/img/logo-evento.svg')}}" class="logo" alt="Perú Sostenible 2023">
+                    <img src="{{asset('img/logo-evento.svg')}}" class="logo" alt="Perú Sostenible 2023">
                 </a>
             </div>
             <div class="flex justify-end">
                 <a href="{{route('auth')}}" class="btn btn-white-outline flex justify-between uppercase">
                     <span>Regístrate</span>
-                    <img src="{{\Illuminate\Support\Facades\Vite::asset('resources/img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]" alt="Menu">
+                    <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]" alt="Menu">
                 </a>
             </div>
         </div>
@@ -26,7 +26,7 @@
     <div class="menu-options{{$header_relative ? '' : ' pt-12'}}">
         <a href="{{route('auth')}}" class="btn btn-red-outline flex justify-between uppercase mb-6">
             <span>Regístrate</span>
-            <img src="{{\Illuminate\Support\Facades\Vite::asset('resources/img/icono-arrow-diagonal-right-red.svg')}}" class="ml-3 h-[15px]" alt="Menu">
+            <img src="{{asset('img/icono-arrow-diagonal-right-red.svg')}}" class="ml-3 h-[15px]" alt="Menu">
         </a>
 
         <p><a href="{{route('home')}}" class="menu-option">Inicio</a></p>

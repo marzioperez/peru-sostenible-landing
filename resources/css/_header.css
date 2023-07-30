@@ -3,7 +3,7 @@ header {
 }
 
 header.with-bg {
-    background-image: url("../img/bg-sections.png");
+    background-image: url("../../public/img/bg-sections.png");
 }
 
 header .waves {
@@ -18,7 +18,7 @@ header .logo {
 }
 
 header.header-fixed {
-    background-image: url("../img/bg-sections.png");
+    background-image: url("../../public/img/bg-sections.png");
     @apply fixed;
 }
 

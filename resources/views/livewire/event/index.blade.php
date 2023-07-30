@@ -2,7 +2,7 @@
     <div class="banner-content">
         <div class="banner-words">
             <livewire:event.words-chart />
-            <div class="bg-banner-words" style="background-image: url({{\Illuminate\Support\Facades\Vite::asset('resources/img/bg-banner-words.png')}})"></div>
+            <div class="bg-banner-words" style="background-image: url({{asset('img/bg-banner-words.png')}})"></div>
         </div>
         <div class="absolute w-full h-full top-0 lef-0 text-white flex items-center justify-center z-20">
             <div>
@@ -59,11 +59,11 @@
         </div>
     </div>
 
-    <div class="py-5 my-5 bg-no-repeat bg-cover bg-center flex items-center justify-center space-x-6" style="background-image: url({{\Illuminate\Support\Facades\Vite::asset('resources/img/bg-sections.png')}})">
+    <div class="py-5 my-5 bg-no-repeat bg-cover bg-center flex items-center justify-center space-x-6" style="background-image: url({{asset('img/bg-sections.png')}})">
         <h1 class="font-tiempos text-white sm:text-6xl text-xl">¡Súmate al evento!</h1>
         <a href="{{route('auth')}}" class="btn btn-white-outline flex justify-between uppercase">
             <span>Regístrate</span>
-            <img src="{{\Illuminate\Support\Facades\Vite::asset('resources/img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]">
+            <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]">
         </a>
     </div>
 

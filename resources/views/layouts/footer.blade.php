@@ -1,7 +1,6 @@
-<footer style="background-image: url({{\Illuminate\Support\Facades\Vite::asset('resources/img/bg-sections.png')}})">
+<footer style="background-image: url({{asset('img/bg-sections.png')}})">
     <div class="absolute w-full top-0 rotate-180">
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
                 <path d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
@@ -16,7 +15,7 @@
                 <button type="button" class="btn btn-white uppercase font-semibold btn-xl">¡Queremos escucharte!</button>
             </div>
             <div class="flex justify-center items-center sm:pt-0 pt-10">
-                <img src="{{\Illuminate\Support\Facades\Vite::asset('resources/img/logo-evento.svg')}}" alt="{{config('app.name')}}">
+                <img src="{{asset('img/logo-evento.svg')}}" alt="{{config('app.name')}}">
             </div>
             <div class="flex justify-center items-center sm:pt-0 pt-10">
                 <div>
