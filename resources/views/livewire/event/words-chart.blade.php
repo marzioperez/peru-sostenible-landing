@@ -1,38 +1,50 @@
 <div>
-    <div id="container" class="h-full w-full opacity-20"></div>
+    <div id="container" class="h-full w-full opacity-30"></div>
 </div>
 @push('scripts')
 <script>
     document.addEventListener('livewire:load', function () {
-        anychart.onDocumentReady(function() {
-            let data = [
-                {"x": "Resiliencia", "value": 1090000000},
-                {"x": "Respeto", "value": 981000000},
-                {"x": "Tolerancia", "value": 544000000},
-                {"x": "Esfuerzo", "value": 520000000},
-                {"x": "Empatía", "value": 422000000},
-                {"x": "Transparencia", "value": 281000000},
-                {"x": "Sostenibilidad", "value": 262000000},
-                {"x": "Colaboración", "value": 261000000},
-                {"x": "Preservación", "value": 229000000},
-                {"x": "Conciencia", "value": 229000000},
-                {"x": "Innovación", "value": 150000000},
-                {"x": "Equilibrio", "value": 248000000}
-            ];
+        am5.ready(function() {
+            let root = am5.Root.new("container");
+            root.setThemes([
+                am5themes_Animated.new(root)
+            ]);
 
-            let chart = anychart.tagCloud(data);
-            chart.fontFamily('Maple');
-            chart.fontWeight(900);
-            chart.textSpacing(5);
-            chart.angles([0]);
+            let series = root.container.children.push(am5wc.WordCloud.new(root, {
+                categoryField: "tag",
+                valueField: "weight",
+                maxFontSize: am5.percent(15)
+            }));
 
-            let customColorScale = anychart.scales.linearColor();
-            customColorScale.colors(["#ffffff"]);
-            chart.colorScale(customColorScale);
+            series.labels.template.setAll({
+                fontFamily: "Maple",
+                fontWeight: "900",
+                fill: '#FFFFFF'
+            });
 
-            // display the word cloud chart
-            chart.container("container");
-            chart.draw();
+            setInterval(function() {
+                am5.array.each(series.dataItems, function(dataItem) {
+                    let value = Math.random() * 65;
+                    value = value - Math.random() * value;
+                    dataItem.set("value", value);
+                    dataItem.set("valueWorking", value);
+                })
+            }, 3000)
+
+            series.data.setAll([
+                { tag: "Resiliencia", weight: 64.96 },
+                { tag: "Respeto", weight: 56.07 },
+                { tag: "Tolerancia", weight: 48.24 },
+                { tag: "Esfuerzo", weight: 47.08 },
+                { tag: "Empatía", weight: 35.35 },
+                { tag: "Transparencia", weight: 33.91 },
+                { tag: "Sostenibilidad", weight: 30.19 },
+                { tag: "Colaboración", weight: 27.86 },
+                { tag: "Preservación", weight: 27.13 },
+                { tag: "Conciencia", weight: 24.31 },
+                { tag: "Innovación", weight: 21.98 },
+                { tag: "Equilibrio", weight: 21.01 }
+            ]);
         });
     });
 </script>

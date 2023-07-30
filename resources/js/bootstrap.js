@@ -9,6 +9,10 @@ import jQuery from 'jquery';
 import Popper from 'popper.js';
 import anychart from 'anychart/dist/js/anychart-bundle.min';
 
+import * as am5 from "@amcharts/amcharts5";
+import * as am5wc from "@amcharts/amcharts5/wc";
+import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
+
 window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
@@ -16,6 +20,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 try {
     window.Popper = Popper;
     window.anychart = anychart;
+    window.am5 = am5;
+    window.am5wc = am5wc;
+    window.am5themes_Animated = am5themes_Animated;
     window.$ = window.jQuery = jQuery;
     //window.slick = slick;
 } catch (e) {}

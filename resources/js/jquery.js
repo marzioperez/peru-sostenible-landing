@@ -9,6 +9,11 @@ $(document).ready(function(){
         }
     });
 
+    $('header .menu-icon').on('click', function (){
+        $(this).toggleClass('active');
+        $('.menu-side').toggleClass('active');
+    });
+
     $('.slick-speakers').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -21,28 +26,27 @@ $(document).ready(function(){
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 1,
-                    dots: false
+                    slidesToScroll: 1
                 }
             },
             {
                 breakpoint: 800,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             }

@@ -17,6 +17,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@amcharts/amcharts5": "^5.4.1",
         "@splidejs/splide": "^4.1.4",
         "anychart": "^8.11.1",
         "jquery": "^3.7.0",

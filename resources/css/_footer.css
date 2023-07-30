@@ -1,3 +1,10 @@
 footer {
-    @apply py-10 bg-no-repeat bg-cover flex items-center mt-10;
+    @apply relative py-10 bg-no-repeat bg-cover flex items-center mt-10;
+}
+
+footer .waves {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    max-height: 120px;
 }

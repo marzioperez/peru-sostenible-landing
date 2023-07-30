@@ -7,6 +7,10 @@ body {
     @apply relative mb-5 overflow-hidden;
 }
 
+ul {
+    @apply mb-3 pl-3 ml-6 list-disc;
+}
+
 .banner-words {
     @apply w-full sm:h-[750px] h-[400px];
     background: linear-gradient(90deg, #0C615D 0%, #0F399C 27.14%, #4C16A3 46.93%, #8A0A82 71.93%, #B4102D 100%);
@@ -21,11 +25,10 @@ body {
     @apply absolute top-0 left-0 w-full h-full bg-no-repeat bg-cover;
 }
 
-.banner-words .words {
+.marquee {
     white-space: nowrap;
     will-change: transform;
     animation: marquee 32s linear infinite;
-    @apply absolute top-0 left-0 w-full h-full;
 }
 
 .banner-words .anychart-credits {
@@ -34,13 +37,6 @@ body {
 
 .banner-words svg path {
     @apply fill-transparent;
-}
-
-.waves {
-    position:relative;
-    width: 100%;
-    min-height:100px;
-    max-height:150px;
 }
 
 .parallax > use {

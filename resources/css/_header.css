@@ -1,5 +1,16 @@
 header {
-    @apply fixed top-0 z-50 w-full py-3 px-8 transition-all;
+    @apply top-0 z-50 w-full py-3 sm:px-8 px-0 transition-all bg-cover bg-no-repeat;
+}
+
+header.with-bg {
+    background-image: url("../img/bg-sections.png");
+}
+
+header .waves {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    max-height: 150px;
 }
 
 header .logo {
@@ -7,5 +18,62 @@ header .logo {
 }
 
 header.header-fixed {
-    @apply bg-red
+    background-image: url("../img/bg-sections.png");
+    @apply fixed;
+}
+
+header.header-fixed .menu-icon.active .line {
+    stroke: #FFF;
+}
+
+header .menu {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+header .menu-rotate.active {
+    transform: rotate(45deg);
+}
+
+header .menu-icon.active .line {
+    stroke: #EF3340;
+}
+
+header .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke-width: 6.5;
+    @apply stroke-white;
+}
+
+.menu-icon .top {
+    stroke-dasharray: 40 121;
+}
+.menu-icon .bottom {
+    stroke-dasharray: 40 121;
+}
+
+.menu-side {
+    @apply fixed z-30 h-screen bg-white py-10 px-8 -left-[300px] transition-all shadow-md;
+}
+
+.menu-side.active {
+    @apply left-0;
+}
+
+.menu-side .menu-options p {
+    @apply mb-3;
+}
+
+.menu-side .menu-options .menu-option {
+    @apply uppercase font-bold mb-2;
+}
+
+.menu-side .menu-footer {
+    @apply py-5 border-t-2 border-red mt-6;
 }

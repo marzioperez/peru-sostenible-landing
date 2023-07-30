@@ -269,3 +269,16 @@ button{
 .btn-social {
     @apply border-2 rounded-lg text-white flex items-center justify-center text-2xl border-white p-3 w-10 h-10 hover:bg-white hover:text-primary;
 }
+
+.btn-live {
+    @apply relative bg-red py-3 rounded-md pr-6 pl-7 uppercase font-bold text-white;
+}
+
+.btn-live:after {
+    content: "";
+    @apply absolute top-4 left-3 bg-white rounded-full z-10 h-3 w-3;
+}
+
+.btn-social-menu {
+    @apply border rounded-md text-red flex items-center justify-center text-lg border-red p-3 w-8 h-8 hover:bg-red hover:text-white;
+}
