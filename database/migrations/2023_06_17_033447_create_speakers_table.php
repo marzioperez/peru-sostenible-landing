@@ -25,6 +25,8 @@ return new class extends Migration
             $table->string('linkedin_url')->nullable()->default(null);
             $table->string('twitter_url')->nullable()->default(null);
             $table->string('instagram_url')->nullable()->default(null);
+            $table->string('email_url')->nullable()->default(null);
+            $table->string('whatsapp_url')->nullable()->default(null);
             $table->string('image_url')->nullable()->default(null);
             $table->boolean('show')->nullable()->default(false);
             $table->unsignedBigInteger('user_id')->nullable()->default(null);

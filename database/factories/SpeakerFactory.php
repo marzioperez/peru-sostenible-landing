@@ -24,7 +24,9 @@ class SpeakerFactory extends Factory
             'facebook_url' => $this->faker->url,
             'linkedin_url' => $this->faker->url,
             'twitter_url' => $this->faker->url,
-            'instagram_url' => $this->faker->url
+            'instagram_url' => $this->faker->url,
+            'email_url' => $this->faker->email,
+            'whatsapp_url' => $this->faker->phoneNumber
         ];
     }
 }

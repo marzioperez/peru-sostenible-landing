@@ -27,7 +27,8 @@ class Speaker extends Model implements HasMedia {
         'linkedin_url',
         'twitter_url',
         'instagram_url',
-        'image_url',
+        'email_url',
+        'whatsapp_url',
         'user_id',
         'show'
     ];
@@ -41,8 +42,6 @@ class Speaker extends Model implements HasMedia {
     public function getImageUrlAttribute() {
         if ($this->getMedia('main')->count() > 0) {
             return $this->getMedia('main')->first()->getUrl();
-        } else if ($this->attributes['image_url']) {
-            return $this->attributes['image_url'];
         }
         return asset('img/default-speaker.png');
     }
