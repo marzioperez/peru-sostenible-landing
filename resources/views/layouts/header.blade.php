@@ -31,7 +31,7 @@
 
         <p><a href="{{route('home')}}" class="menu-option">Inicio</a></p>
         <p><a href="{{route('about')}}" class="menu-option">Sobre el evento</a></p>
-        <p><a href="{{route('home')}}" class="menu-option">Agenda</a></p>
+        <p><a href="{{route('schedule')}}" class="menu-option">Agenda</a></p>
         <p><a href="{{route('home')}}" class="menu-option">Más del evento</a></p>
         <p><a href="{{route('home')}}" class="menu-option">Expositores</a></p>
         <p><a href="{{route('home')}}" class="menu-option">Aliados</a></p>

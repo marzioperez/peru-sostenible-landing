@@ -14,6 +14,11 @@ $(document).ready(function(){
         $('.menu-side').toggleClass('active');
     });
 
+    $('.class-speaker-row').hover(function (){
+        let $this = $(this);
+        $('img.speaker-image').attr('src', $this.data('speaker-image-url'));
+    });
+
     $('.slick-speakers').slick({
         slidesToShow: 4,
         slidesToScroll: 1,

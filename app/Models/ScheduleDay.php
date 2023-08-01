@@ -15,11 +15,16 @@ class ScheduleDay extends Model {
         'schedule_date'
     ];
 
-    protected $appends = ['schedule_date_format', 'active', 'day_name', 'day_number'];
+    protected $appends = ['schedule_date_format', 'active', 'day_name', 'day_number', 'day_month_name'];
 
     public function getDayNameAttribute() {
         $date = Carbon::parse($this->schedule_date);
         return ucfirst($date->dayName);
+    }
+
+    public function getDayMonthNameAttribute() {
+        $date = Carbon::parse($this->schedule_date);
+        return $date->isoFormat('MMMM');
     }
 
     public function getDayNumberAttribute() {

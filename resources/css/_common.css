@@ -50,6 +50,14 @@ ul {
     @apply h-auto;
 }
 
+.class-speaker-row {
+    @apply cursor-pointer transition-all;
+}
+
+.class-speaker-row:hover {
+    @apply bg-gray-100;
+}
+
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);

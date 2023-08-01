@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ScheduleActivity extends Model {
@@ -19,5 +20,9 @@ class ScheduleActivity extends Model {
         'speaker_id',
         'schedule_day_id'
     ];
+
+    public function speaker(): HasOne {
+        return $this->hasOne(Speaker::class, 'id', 'speaker_id');
+    }
 
 }

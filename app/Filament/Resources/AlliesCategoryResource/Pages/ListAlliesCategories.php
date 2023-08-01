@@ -19,6 +19,6 @@ class ListAlliesCategories extends ListRecords
     }
 
     protected function getTableQuery(): Builder {
-        return parent::getTableQuery()->orderBy('order');
+        return parent::getTableQuery()->ordered();
     }
 }
