@@ -3,6 +3,8 @@
         <div>
             <h1 class="text-[#3E3C4F] sm:text-8xl text-4xl leading-none mb-0 uppercase text-center">Agenda</h1>
         </div>
+    </div>
+    <div class="container">
         <div class="grid grid-cols-12">
             <div class="col-span-2">
                 <select wire:model="current_day_id" wire:change="handleChangeDay">

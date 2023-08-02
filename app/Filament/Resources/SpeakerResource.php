@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\SpeakerResource\Pages;
 use App\Filament\Resources\SpeakerResource\RelationManagers;
+use App\Models\AlliesCategory;
 use App\Models\Speaker;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -62,6 +63,12 @@ class SpeakerResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\Action::make('up')
+                    ->icon('heroicon-o-arrow-up')->label('')
+                    ->action(fn (Speaker $record) => $record->moveOrderUp()),
+                Tables\Actions\Action::make('down')
+                    ->icon('heroicon-o-arrow-down')->label('')
+                    ->action(fn (Speaker $record) => $record->moveOrderDown())
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),

@@ -11,8 +11,7 @@ button{
 }
 
 .btn.icon-left i {
-    margin-right: 10px;
-    margin-left: 0;
+    @apply ml-0 mr-3;
 }
 
 /* Extra small buttons */
@@ -180,6 +179,10 @@ button{
     @apply bg-red text-white;
 }
 
+.btn-red-outline:hover img {
+    @apply brightness-0 invert;
+}
+
 .btn-primary-light-outline {
     @apply border border-primary-light bg-white shadow-sm text-primary-light;
 }
@@ -231,7 +234,7 @@ button{
 }
 
 .btn-only-icon i {
-    margin-left: 0;
+    @apply ml-0;
 }
 
 /* Btn transparent */

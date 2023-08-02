@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('allies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('order');
+            $table->integer('order')->nullable()->default(0);
             $table->unsignedBigInteger('allie_category_id')->nullable()->default(null);
             $table->softDeletes();
             $table->timestamps();

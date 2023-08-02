@@ -5,13 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\EloquentSortable\Sortable;
+use Spatie\EloquentSortable\SortableTrait;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class Speaker extends Model implements HasMedia {
+class Speaker extends Model implements HasMedia, Sortable {
 
-    use HasFactory, SoftDeletes, InteractsWithMedia;
+    use HasFactory, SoftDeletes, InteractsWithMedia, SortableTrait;
 
     protected $dates = ["deleted_at"];
 
@@ -29,11 +31,15 @@ class Speaker extends Model implements HasMedia {
         'instagram_url',
         'email_url',
         'whatsapp_url',
-        'user_id',
-        'show'
+        'order'
     ];
 
     protected $appends = ['name', 'image_url'];
+
+    public $sortable = [
+        'order_column_name' => 'order',
+        'sort_when_creating' => true
+    ];
 
     public function getNameAttribute() {
         return $this->first_name . " " . $this->last_name;
