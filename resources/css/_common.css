@@ -58,6 +58,12 @@ ul {
     @apply bg-gray-100;
 }
 
+.waves {
+    position: relative;
+    width: 100%;
+    max-height: 100px;
+}
+
 .waves .parallax use {
     animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }

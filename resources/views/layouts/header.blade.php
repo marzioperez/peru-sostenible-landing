@@ -14,10 +14,10 @@
                 </a>
             </div>
             <div class="flex justify-end">
-                <a href="{{route('auth')}}" class="btn btn-white-outline flex justify-between uppercase">
+                <button type="button" class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="login-modal">
                     <span>Regístrate</span>
                     <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]" alt="Menu">
-                </a>
+                </button>
             </div>
         </div>
     </div>

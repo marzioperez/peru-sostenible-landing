@@ -48,3 +48,20 @@
 <div class="py-3 text-center text-sm">
     Web developed by Cien Pies Producciones
 </div>
+
+<div class="modal" id="login-modal">
+    <div class="modal-content">
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <div class="flex items-center space-x-3">
+                    <div class="modal-close">
+                        <span class="text-white text-sm uppercase leading-none">Cerrar</span> <span class="text-[40px] font-light">&times;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <livewire:auth.index />
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,7 @@ class Speakers extends Component {
     public $speakers = [];
 
     public function mount() {
-        $this->speakers = Speaker::ordered()->get();
+        $this->speakers = Speaker::with('activities')->ordered()->get();
     }
 
     public function render() {

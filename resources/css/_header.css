@@ -3,14 +3,8 @@ header {
 }
 
 header.with-bg {
-    background-image: url("../../public/img/bg-sections.png");
-}
-
-header .waves {
-    position: relative;
-    width: 100%;
-    min-height: 100px;
-    max-height: 150px;
+    /*background-image: url("../../public/img/bg-sections.png");*/
+    @apply bg-red;
 }
 
 header .logo {
@@ -18,8 +12,8 @@ header .logo {
 }
 
 header.header-fixed {
-    background-image: url("../../public/img/bg-sections.png");
-    @apply fixed;
+    /*background-image: url("../../public/img/bg-sections.png");*/
+    @apply bg-red fixed;
 }
 
 header.header-fixed .menu-icon.active .line {
@@ -36,9 +30,9 @@ header .menu {
     user-select: none;
 }
 
-header .menu-rotate.active {
-    transform: rotate(45deg);
-}
+/*header .menu-rotate.active {*/
+/*    transform: rotate(45deg);*/
+/*}*/
 
 header .menu-icon.active .line {
     stroke: #EF3340;
@@ -71,7 +65,7 @@ header .line {
 }
 
 .menu-side .menu-options .menu-option {
-    @apply uppercase font-bold mb-2;
+    @apply uppercase font-bold mb-2 hover:text-red;
 }
 
 .menu-side .menu-footer {

@@ -1,6 +1,4 @@
 <div>
-    <p class="text-xl text-red font-tiempos">Regístrate</p>
-
     <form wire:submit.prevent="process">
         <div class="w-full">
             <div class="form-group">
