@@ -61,6 +61,7 @@ $(document).ready(function(){
 
     $(".modal-close").on('click', function (e) {
         e.preventDefault();
+        $('body').toggleClass('overflow-hidden');
         $(".modal").hide();
     });
 
@@ -112,6 +113,7 @@ $(document).ready(function(){
 
     $(".open-modal").on('click', function (e) {
         e.preventDefault();
+        $('body').toggleClass('overflow-hidden');
         $("#" + $(this).data('modal')).show();
     });
 });
