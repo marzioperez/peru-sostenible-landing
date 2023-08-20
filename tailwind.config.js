@@ -32,6 +32,12 @@ module.exports = {
                     DEFAULT: '#4C2048',
                     dark: '#2a1128'
                 },
+                purple: {
+                    lightest: '#868593',
+                    light: '#3d3859',
+                    DEFAULT: '#3E3C4F',
+                    dark: '#262633'
+                },
                 danger: {
                     lightest: '#FFF4F3',
                     light: '#FCC6C1',

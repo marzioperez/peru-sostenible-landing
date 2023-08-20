@@ -162,6 +162,11 @@ button{
     @apply text-white;
 }
 
+/* Purple */
+.btn-purple {
+    @apply border-transparent bg-purple text-white hover:bg-purple-dark;
+}
+
 /* Outline buttons */
 .btn-primary-outline {
     @apply border border-primary bg-white shadow-sm text-primary;
@@ -169,6 +174,14 @@ button{
 
 .btn-primary-outline:hover {
     @apply bg-primary-dark text-white;
+}
+
+.btn-purple-outline {
+    @apply border border-purple bg-white shadow-sm text-purple;
+}
+
+.btn-purple-outline:hover {
+    @apply bg-purple-dark text-white;
 }
 
 .btn-red-outline {
@@ -181,6 +194,10 @@ button{
 
 .btn-red-outline:hover img {
     @apply brightness-0 invert;
+}
+
+.btn-white-outline:hover img {
+    @apply brightness-100 invert;
 }
 
 .btn-primary-light-outline {
@@ -221,6 +238,10 @@ button{
 
 .btn-white-outline {
     @apply border-2 border-white text-white bg-transparent hover:border-gray-100;
+}
+
+.btn-white-outline:hover {
+    @apply border-2 text-gray bg-white hover:border-gray-100;
 }
 
 /* Only icon buttons */

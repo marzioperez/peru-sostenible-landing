@@ -27,7 +27,6 @@ return new class extends Migration
             $table->string('instagram_url')->nullable()->default(null);
             $table->string('email_url')->nullable()->default(null);
             $table->string('whatsapp_url')->nullable()->default(null);
-            $table->string('image_url')->nullable()->default(null);
             $table->integer('order')->nullable()->default(0);
             $table->softDeletes();
             $table->timestamps();

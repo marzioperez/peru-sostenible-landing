@@ -33,9 +33,15 @@ class AllieResource extends Resource
                         'xl' => 12,
                         '2xl' => 8
                     ])->schema([
-                        Forms\Components\TextInput::make('name')->required()->label('Nombre')->columnSpan(['sm' => 1, 'xl' => 8]),
-//                        Forms\Components\TextInput::make('order')->numeric()->required()->label('Oren')->columnSpan(['sm' => 1, 'xl' => 2]),
-                        Forms\Components\Select::make('allie_category_id')->label('Categoría')->options(AlliesCategory::all()->pluck('name', 'id'))->searchable()->columnSpan(4),
+                        Forms\Components\TextInput::make('name')->required()->label('Nombre')->columnSpan(['sm' => 1, 'xl' => 7]),
+                        Forms\Components\Select::make('allie_category_id')->label('Categoría')->options(AlliesCategory::all()->pluck('name', 'id'))->searchable()->columnSpan(5),
+                        Forms\Components\TextInput::make('facebook_url')->label('URL Facebook')->columnSpan(['sm' => 1, 'xl' => 3]),
+                        Forms\Components\TextInput::make('instagram_url')->label('URL Instagram')->columnSpan(['sm' => 1, 'xl' => 3]),
+                        Forms\Components\TextInput::make('email_url')->label('E-mail')->columnSpan(['sm' => 1, 'xl' => 3]),
+                        Forms\Components\TextInput::make('whatsapp_url')->label('WhatsApp')->columnSpan(['sm' => 1, 'xl' => 3]),
+
+                        Forms\Components\Textarea::make('iframe')->label('Iframe video')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),
+                        Forms\Components\SpatieMediaLibraryFileUpload::make('featured_image')->label('Logo')->collection('main')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),
                     ])
                 ])
             ]);
@@ -46,10 +52,10 @@ class AllieResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')->label('Nombre'),
-//                Tables\Columns\TextColumn::make('order')->label('Orden'),
+                Tables\Columns\SelectColumn::make('allie_category_id')->label('Categoría')->options(AlliesCategory::all()->pluck('name', 'id'))
             ])
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('allie_category_id')->label('Filtrar por categoría')->options(AlliesCategory::all()->pluck('name', 'id'))
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

@@ -68,6 +68,23 @@ ul {
     animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
 }
 
+.zoom-content * {
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.zoom-content:hover h1,
+.zoom-content:hover h2,
+.zoom-content:hover h3,
+.zoom-content:hover h4,
+.zoom-content:hover h5 {
+    transform: scale(1.2);
+}
+
+.zoom-content:hover img {
+    transform: scale(0.9);
+}
+
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);

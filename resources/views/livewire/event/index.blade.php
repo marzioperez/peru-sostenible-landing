@@ -31,17 +31,19 @@
     <div class="container py-10">
         <div class="sm:grid grid-cols-12 gap-6">
             <div class="col-span-4">
-                <div class="bg-[#DD4648] shadow-sm p-8">
+                <div class="bg-[#DD4648] shadow-sm p-8 zoom-content">
                     <h1 class="uppercase text-white">Sobre<br> el evento</h1>
                     <img src="{{asset('img/evento-1.png')}}" class="w-full" />
                 </div>
             </div>
             <div class="col-span-8">
                 <div class="sm:grid grid-cols-2 gap-6">
-                    <div class="bg-[#25254E] p-8 flex items-center justify-center text-center h-[220px] shadow-sm">
-                        <h1 class="uppercase sm:text-6xl text-3xl text-white">Agenda</h1>
-                    </div>
-                    <div class="bg-[#F2C0D7] p-8 sm:h-[220px] shadow-sm flex items-center">
+                    <a href="{{route('schedule')}}">
+                        <div class="bg-[#25254E] zoom-content p-8 flex items-center justify-center text-center h-[220px] shadow-sm">
+                            <h1 class="uppercase sm:text-6xl text-3xl text-white">Agenda</h1>
+                        </div>
+                    </a>
+                    <div class="bg-[#F2C0D7] p-8 sm:h-[220px] shadow-sm flex items-center zoom-content">
                         <h2 class="mb-0 uppercase sm:text-5xl text-2xl text-[#921E4E]">Más<br>detalles</h2>
                     </div>
                 </div>
@@ -61,10 +63,10 @@
 
     <div class="py-5 my-5 bg-no-repeat bg-cover bg-center flex items-center justify-center space-x-6" style="background-image: url({{asset('img/bg-sections.png')}})">
         <h1 class="font-tiempos text-white sm:text-6xl text-xl">¡Súmate al evento!</h1>
-        <a href="{{route('auth')}}" class="btn btn-white-outline flex justify-between uppercase">
+        <button type="button" class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="login-modal">
             <span>Regístrate</span>
             <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]">
-        </a>
+        </button>
     </div>
 
     <div class="container py-5">

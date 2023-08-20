@@ -21,8 +21,9 @@ class Schedule extends Component {
         $this->activities = ScheduleActivity::with('speaker')->where('schedule_day_id', $current_day['id'])->get();
     }
 
-    public function handleChangeDay() {
-        $this->emit('change_schedule_day', $this->current_day_id);
+    public function handleChangeDay($current_day_id) {
+        $this->current_day_id = $current_day_id;
+        $this->emit('change_schedule_day', $current_day_id);
     }
 
     public function render() {

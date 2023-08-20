@@ -22,6 +22,13 @@ class AlliesSeeder extends Seeder
             Allie::create([
                 'name' => fake()->company,
                 'order' => $i + 1,
+                'phone' => fake()->phoneNumber,
+                'facebook_url' => fake()->url,
+                'linkedin_url' => fake()->url,
+                'twitter_url' => fake()->url,
+                'instagram_url' => fake()->url,
+                'email_url' => fake()->email,
+                'whatsapp_url' => fake()->url,
                 'allie_category_id' => $premium->id
             ]);
         }
@@ -35,6 +42,13 @@ class AlliesSeeder extends Seeder
             Allie::create([
                 'name' => fake()->company,
                 'order' => $i + 1,
+                'phone' => fake()->phoneNumber,
+                'facebook_url' => fake()->url,
+                'linkedin_url' => fake()->url,
+                'twitter_url' => fake()->url,
+                'instagram_url' => fake()->url,
+                'email_url' => fake()->email,
+                'whatsapp_url' => fake()->url,
                 'allie_category_id' => $oro->id
             ]);
         }
@@ -48,6 +62,13 @@ class AlliesSeeder extends Seeder
             Allie::create([
                 'name' => fake()->company,
                 'order' => $i + 1,
+                'phone' => fake()->phoneNumber,
+                'facebook_url' => fake()->url,
+                'linkedin_url' => fake()->url,
+                'twitter_url' => fake()->url,
+                'instagram_url' => fake()->url,
+                'email_url' => fake()->email,
+                'whatsapp_url' => fake()->url,
                 'allie_category_id' => $plata->id
             ]);
         }
@@ -61,6 +82,13 @@ class AlliesSeeder extends Seeder
             Allie::create([
                 'name' => fake()->company,
                 'order' => $i + 1,
+                'phone' => fake()->phoneNumber,
+                'facebook_url' => fake()->url,
+                'linkedin_url' => fake()->url,
+                'twitter_url' => fake()->url,
+                'instagram_url' => fake()->url,
+                'email_url' => fake()->email,
+                'whatsapp_url' => fake()->url,
                 'allie_category_id' => $medios->id
             ]);
         }
@@ -74,6 +102,13 @@ class AlliesSeeder extends Seeder
             Allie::create([
                 'name' => fake()->company,
                 'order' => $i + 1,
+                'phone' => fake()->phoneNumber,
+                'facebook_url' => fake()->url,
+                'linkedin_url' => fake()->url,
+                'twitter_url' => fake()->url,
+                'instagram_url' => fake()->url,
+                'email_url' => fake()->email,
+                'whatsapp_url' => fake()->url,
                 'allie_category_id' => $colaboradores->id
             ]);
         }
