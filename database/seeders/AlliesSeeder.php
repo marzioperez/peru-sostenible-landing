@@ -29,6 +29,7 @@ class AlliesSeeder extends Seeder
                 'instagram_url' => fake()->url,
                 'email_url' => fake()->email,
                 'whatsapp_url' => fake()->url,
+                'biography' => fake()->paragraph,
                 'allie_category_id' => $premium->id
             ]);
         }
@@ -49,6 +50,7 @@ class AlliesSeeder extends Seeder
                 'instagram_url' => fake()->url,
                 'email_url' => fake()->email,
                 'whatsapp_url' => fake()->url,
+                'biography' => fake()->paragraph,
                 'allie_category_id' => $oro->id
             ]);
         }
@@ -69,6 +71,7 @@ class AlliesSeeder extends Seeder
                 'instagram_url' => fake()->url,
                 'email_url' => fake()->email,
                 'whatsapp_url' => fake()->url,
+                'biography' => fake()->paragraph,
                 'allie_category_id' => $plata->id
             ]);
         }
@@ -89,6 +92,7 @@ class AlliesSeeder extends Seeder
                 'instagram_url' => fake()->url,
                 'email_url' => fake()->email,
                 'whatsapp_url' => fake()->url,
+                'biography' => fake()->paragraph,
                 'allie_category_id' => $medios->id
             ]);
         }
@@ -109,6 +113,7 @@ class AlliesSeeder extends Seeder
                 'instagram_url' => fake()->url,
                 'email_url' => fake()->email,
                 'whatsapp_url' => fake()->url,
+                'biography' => fake()->paragraph,
                 'allie_category_id' => $colaboradores->id
             ]);
         }

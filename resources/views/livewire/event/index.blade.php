@@ -72,9 +72,11 @@
     <div class="container py-5">
         <div class="sm:grid grid-cols-12 gap-6">
             <div class="col-span-5">
-                <div class="bg-[#DD4648] flex items-center justify-center p-8 h-[490px] shadow-sm">
-                    <h1 class="mb-0 uppercase text-white text-center sm:text-7xl text-3xl">Aliados</h1>
-                </div>
+                <a href="{{route('allies')}}">
+                    <div class="bg-[#DD4648] flex items-center justify-center p-8 h-[490px] shadow-sm zoom-content">
+                        <h1 class="mb-0 uppercase text-white text-center sm:text-7xl text-3xl">Aliados</h1>
+                    </div>
+                </a>
             </div>
             <div class="col-span-7">
                 <div class="bg-[#921E4E] p-8 h-[260px] flex items-center shadow-sm">

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('email_url')->nullable()->default(null);
             $table->string('whatsapp_url')->nullable()->default(null);
             $table->longText('iframe')->nullable()->default(null);
+            $table->longText('biography')->nullable()->default(null);
             $table->unsignedBigInteger('allie_category_id')->nullable()->default(null);
             $table->softDeletes();
             $table->timestamps();

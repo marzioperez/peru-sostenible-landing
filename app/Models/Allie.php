@@ -26,6 +26,7 @@ class Allie extends Model implements Sortable, HasMedia {
         'email_url',
         'whatsapp_url',
         'iframe',
+        'biography',
         'allie_category_id'
     ];
 
