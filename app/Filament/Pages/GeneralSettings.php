@@ -37,13 +37,14 @@ class GeneralSettings extends SettingsPage
                     'default' => 1,
                     'sm' => 3,
                     'xl' => 12,
-                    '2xl' => 8
+                    '2xl' => 12
                 ])->schema([
-                    Select::make('current_activity_id')
-                        ->label('Actividad en curso')
-                        ->options($activities)->columnSpanFull(),
-                    Textarea::make('embed')
-                        ->label('Embed a mostrar en Live')->columnSpanFull()
+                    Select::make('current_activity_id')->label('Actividad en curso')->options($activities)->columnSpanFull(),
+                    Forms\Components\Toggle::make('show_countdown')->inline(false)->label('Mostrar cuenta regresiva')->columnSpan(4),
+                    Forms\Components\DateTimePicker::make('end_date_countdown')->label('Fecha de fin de cuenta regresiva')->columnSpan(8),
+                    Forms\Components\Toggle::make('show_users_number')->inline(false)->label('Mostrar número de usuarios registrados')->columnSpan(4),
+                    Forms\Components\TextInput::make('users_default_number')->numeric()->label('Número de registrados por defecto')->columnSpan(8),
+                    Textarea::make('embed')->label('Embed a mostrar en Live')->columnSpanFull()
                 ])
             ])
         ];

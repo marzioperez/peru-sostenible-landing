@@ -6,13 +6,16 @@
         </div>
         <div class="absolute w-full h-full top-0 lef-0 text-white flex items-center justify-center z-20">
             <div>
-                <h3 class="sm:text-6xl text-2xl leading-none mb-0 uppercase">Ya somos</h3>
-                <h1 class="sm:text-12xl text-3xl font-bold leading-none uppercase mb-0">1,250</h1>
-                <p class="uppercase text-right sm:text-4xl text-lg sm:-mt-7 sm:mb-3 mb-0">Inscritos</p>
-
-                <div>
-
-                </div>
+                @if($show_users_number)
+                    <h3 class="sm:text-6xl text-xl sm:text-left text-center leading-none mb-0 uppercase">Ya somos</h3>
+                    <h1 class="sm:text-12xl text-center text-6xl font-bold leading-none uppercase mb-0">{{number_format($this->users_default_number, 0,',')}}</h1>
+                    <p class="uppercase sm:text-right text-center sm:text-4xl text-lg sm:-mt-7 sm:mb-3 mb-0">Inscritos</p>
+                @endif
+                @if($show_countdown)
+                    <div>
+                        <x-countdown :date_time="$end_date_countdown" />
+                    </div>
+               @endif
             </div>
         </div>
         <div class="absolute w-full bottom-3">
@@ -32,8 +35,10 @@
         <div class="sm:grid grid-cols-12 gap-6">
             <div class="col-span-4">
                 <div class="bg-[#DD4648] shadow-sm p-8 zoom-content">
-                    <h1 class="uppercase text-white">Sobre<br> el evento</h1>
-                    <img src="{{asset('img/evento-1.png')}}" class="w-full" />
+                    <a href="{{route('about')}}">
+                        <h1 class="uppercase text-white">Sobre<br> el evento</h1>
+                        <img src="{{asset('img/evento-1.png')}}" class="w-full" />
+                    </a>
                 </div>
             </div>
             <div class="col-span-8">
@@ -52,7 +57,7 @@
                     <div class="slick-speakers">
                         @foreach($speakers as $speaker)
                             <div class="slick-speakers-item">
-                                <div class="w-[180px] h-[180px] bg-cover bg-center" style="background-image: url('{{$speaker['image_url']}}')"></div>
+                                <div class="w-[180px] h-[180px] bg-cover bg-center cursor-pointer open-modal-speaker" data-speaker="{{json_encode($speaker)}}" style="background-image: url('{{$speaker['image_url']}}')"></div>
                             </div>
                         @endforeach
                     </div>

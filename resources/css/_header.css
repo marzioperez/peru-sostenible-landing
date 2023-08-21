@@ -3,7 +3,6 @@ header {
 }
 
 header.with-bg {
-    /*background-image: url("../../public/img/bg-sections.png");*/
     @apply bg-red;
 }
 

@@ -3,6 +3,7 @@
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
+import Alpine from 'alpinejs';
 import axios from 'axios';
 import jQuery from 'jquery';
 // import slick from 'slick-carousel';
@@ -24,6 +25,8 @@ try {
     window.am5wc = am5wc;
     window.am5themes_Animated = am5themes_Animated;
     window.$ = window.jQuery = jQuery;
+    window.Alpine = Alpine;
+    Alpine.start();
     //window.slick = slick;
 } catch (e) {}
 

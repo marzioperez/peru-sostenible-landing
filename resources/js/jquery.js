@@ -10,7 +10,6 @@ $(document).ready(function(){
     });
 
     $('header .menu-icon').on('click', function (){
-        console.log("ola");
         $(this).toggleClass('active');
         $('.menu-side').toggleClass('active');
     });
@@ -66,7 +65,9 @@ $(document).ready(function(){
     });
 
     $('.open-modal-speaker').on('click', function (){
+        console.log("ola");
         let speaker = $(this).data('speaker');
+        console.log(speaker);
         let modal_speaker = $(".modal-speaker");
 
         modal_speaker.find('.modal-speaker-name').text(speaker['name']);
@@ -108,6 +109,7 @@ $(document).ready(function(){
             modal_speaker_social.find('modal-speaker-activities').hide();
         }
 
+        $('body').toggleClass('overflow-hidden');
         modal_speaker.show();
     });
 

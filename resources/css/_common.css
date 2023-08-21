@@ -85,6 +85,18 @@ ul {
     transform: scale(0.9);
 }
 
+.count-down {
+    @apply flex items-center justify-center space-x-6;
+}
+
+.count-down .digit {
+    @apply sm:text-6xl text-2xl text-center mb-0 pb-0 leading-none;
+}
+
+.count-down .digit-text {
+    @apply sm:text-md text-xs uppercase text-center font-bold -mt-3;
+}
+
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);
