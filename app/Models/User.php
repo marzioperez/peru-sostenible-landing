@@ -13,9 +13,9 @@ class User extends Authenticatable
     use HasApiTokens, HasFactory, Notifiable;
 
     const COMMITMENTS = [
-        'Resiliencia', 'Respeto', 'Tolerancia', 'Esfuerzo', 'Empatía',
-        'Transparencia', 'Sostenibilidad', 'Colaboración', 'Preservación',
-        'Conciencia', 'Innovación', 'Equilibrio'
+        'Futuro', 'Impacto', 'Gestión integral', 'Equilibrio', 'Articulación',
+        'Resiliencia', 'Triple impacto', 'Balance', 'Medio ambiente',
+        'Trascendencia', 'Valor compartido', 'Enfoque sistémico'
     ];
 
     /**

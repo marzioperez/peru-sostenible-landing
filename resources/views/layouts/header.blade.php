@@ -24,10 +24,10 @@
 </header>
 <div class="menu-side">
     <div class="menu-options{{$header_relative ? '' : ' pt-12'}}">
-        <a href="{{route('auth')}}" class="btn btn-red-outline flex justify-between uppercase mb-6">
+        <button type="button" class="btn btn-red-outline flex justify-between uppercase mb-6 open-modal" data-modal="login-modal">
             <span>Regístrate</span>
             <img src="{{asset('img/icono-arrow-diagonal-right-red.svg')}}" class="ml-3 h-[15px]" alt="Menu">
-        </a>
+        </button>
 
         <p><a href="{{route('home')}}" class="menu-option">Inicio</a></p>
         <p><a href="{{route('about')}}" class="menu-option">Sobre el evento</a></p>

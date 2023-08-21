@@ -11,6 +11,7 @@ class Register extends Component {
     public $first_name, $last_name, $email, $phone, $company, $accept_terms;
     public $commitments = [];
     public $commitments_options = User::COMMITMENTS;
+    public $show_thanks = false;
     public $error_commitments = null;
 
     protected $rules = [
@@ -50,7 +51,7 @@ class Register extends Component {
             'token' => $token
         ]);
 
-        return redirect()->route('thanks', ['token' => $token]);
+        $this->show_thanks = true;
     }
 
     public function setCommit($type): void {
