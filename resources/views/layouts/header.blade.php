@@ -34,7 +34,7 @@
         <p><a href="{{route('schedule')}}" class="menu-option">Agenda</a></p>
         <p><a href="{{route('home')}}" class="menu-option">Más del evento</a></p>
         <p><a href="{{route('speakers')}}" class="menu-option">Expositores</a></p>
-        <p><a href="{{route('home')}}" class="menu-option">Aliados</a></p>
+        <p><a href="{{route('allies')}}" class="menu-option">Aliados</a></p>
         <p class="py-3"><a href="{{route('home')}}" class="btn-live">En vivo</a></p>
         <p><a href="{{route('home')}}" class="menu-option">Revive las sesiones</a></p>
         <p><a href="{{route('home')}}" class="menu-option">Galería</a></p>

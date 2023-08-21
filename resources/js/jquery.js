@@ -1,4 +1,5 @@
 import 'slick-carousel';
+import {all} from "axios";
 $(document).ready(function(){
 
     $(window).scroll(function() {
@@ -64,10 +65,44 @@ $(document).ready(function(){
         $(".modal").hide();
     });
 
+    $('.open-allie-modal').on('click', function () {
+        let allie = $(this).data('allie');
+        let modal_allie = $(".modal-allie");
+
+        modal_allie.find('.modal-allie-name').text(allie['name']);
+        modal_allie.find('.modal-allie-biography').html(allie['biography']);
+        modal_allie.find('.modal-allie-image').css('background-image', 'url('+ allie['image_url'] +')');
+
+        let modal_allie_social = modal_allie.find('.modal-allie-social');
+        modal_allie_social.find('a').hide();
+        if(allie['facebook_url']) {
+            modal_allie_social.find('a.facebook').show().attr('href', allie['facebook_url']);
+        }
+
+        if(allie['linkedin_url']) {
+            modal_allie_social.find('a.linkedin').show().attr('href', allie['linkedin_url']);
+        }
+
+        if(allie['email_url']) {
+            modal_allie_social.find('a.email').show().attr('href', allie['email_url']);
+        }
+
+        if(allie['whatsapp_url']) {
+            modal_allie_social.find('a.whatsapp').show().attr('href', allie['whatsapp_url']);
+        }
+
+        modal_allie.find('.modal-allie-embed').hide().html('');
+        if (allie['iframe']) {
+            modal_allie.find('.modal-allie-embed').show().html(allie['iframe']);
+        }
+
+        $('body').toggleClass('overflow-hidden');
+        modal_allie.show();
+        console.log(allie);
+    });
+
     $('.open-modal-speaker').on('click', function (){
-        console.log("ola");
         let speaker = $(this).data('speaker');
-        console.log(speaker);
         let modal_speaker = $(".modal-speaker");
 
         modal_speaker.find('.modal-speaker-name').text(speaker['name']);

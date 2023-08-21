@@ -21,6 +21,7 @@
         <main>
             {{ $slot }}
         </main>
+        @include('layouts.modals')
         @include('layouts.footer')
         @livewireScripts
         @stack('scripts')

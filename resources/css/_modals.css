@@ -22,12 +22,14 @@
     @apply flex flex-col gap-2 py-8 px-10;
 }
 
-/* Modal expositor */
-.modal-speaker-image {
+/* Modal expositor y aliado */
+.modal-speaker-image,
+.modal-allie-image {
     @apply w-full h-[210px] bg-gray-400 bg-no-repeat bg-cover bg-center;
 }
 
-.modal-speaker-name {
+.modal-speaker-name,
+.modal-allie-name {
     @apply mb-0 pb-0 uppercase text-[#5F5D5D];
 }
 
@@ -35,28 +37,35 @@
     @apply mb-3 text-sm uppercase text-[#5F5D5D];
 }
 
-.modal-speaker-social {
+.modal-speaker-social,
+.modal-allie-social {
     @apply flex items-center space-x-3;
 }
 
-.modal-speaker-social-circle {
+.modal-speaker-social-circle,
+.modal-allie-social-circle {
     @apply w-[35px] h-[35px] p-3 rounded-full border-2 border-[#5f5D5D] flex items-center text-center justify-center;
 }
 
-.modal-speaker-social-simple i{
+.modal-speaker-social-simple i,
+.modal-allie-social-simple i {
     @apply text-3xl;
 }
 
 .modal-speaker-social-circle,
-.modal-speaker-social {
+.modal-speaker-social,
+.modal-allie-social-circle,
+.modal-allie-social {
     @apply text-[#5F5D5D];
 }
 
-.modal-speaker-biography {
+.modal-speaker-biography,
+.modal-allie-biography {
     @apply mb-10 text-[#5F5D5D];
 }
 
-.modal-speaker-biography p {
+.modal-speaker-biography p,
+.modal-allie-biography p {
     @apply mb-3;
 }
 
@@ -78,4 +87,8 @@
 
 .modal-speaker-activities .row .column-3 {
     @apply col-span-1;
+}
+
+.modal-allie-embed {
+    @apply my-6;
 }
