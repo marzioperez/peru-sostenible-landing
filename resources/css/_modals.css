@@ -30,21 +30,21 @@
 
 .modal-speaker-name,
 .modal-allie-name {
-    @apply mb-0 pb-0 uppercase text-[#5F5D5D];
+    @apply mb-0 pb-0 uppercase text-[#5F5D5D] sm:text-left text-center sm:mt-0 mt-4;
 }
 
 .modal-speaker-position {
-    @apply mb-3 text-sm uppercase text-[#5F5D5D];
+    @apply mb-3 text-sm uppercase text-[#5F5D5D] sm:text-left text-center;
 }
 
 .modal-speaker-social,
 .modal-allie-social {
-    @apply flex items-center space-x-3;
+    @apply flex items-center sm:justify-start justify-center space-x-3;
 }
 
 .modal-speaker-social-circle,
 .modal-allie-social-circle {
-    @apply w-[35px] h-[35px] p-3 rounded-full border-2 border-[#5f5D5D] flex items-center text-center justify-center;
+    @apply w-[35px] h-[35px] p-3 rounded-md border-2 border-[#5f5D5D] flex items-center text-center justify-center hover:bg-red hover:text-white hover:border-red;
 }
 
 .modal-speaker-social-simple i,

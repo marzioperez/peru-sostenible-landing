@@ -31,14 +31,17 @@ class AllieResource extends Resource
                         'default' => 1,
                         'sm' => 3,
                         'xl' => 12,
-                        '2xl' => 8
+                        '2xl' => 12
                     ])->schema([
                         Forms\Components\TextInput::make('name')->required()->label('Nombre')->columnSpan(['sm' => 1, 'xl' => 7]),
                         Forms\Components\Select::make('allie_category_id')->label('Categoría')->options(AlliesCategory::all()->pluck('name', 'id'))->searchable()->columnSpan(5),
-                        Forms\Components\TextInput::make('facebook_url')->label('URL Facebook')->columnSpan(['sm' => 1, 'xl' => 3]),
-                        Forms\Components\TextInput::make('instagram_url')->label('URL Instagram')->columnSpan(['sm' => 1, 'xl' => 3]),
-                        Forms\Components\TextInput::make('email_url')->label('E-mail')->columnSpan(['sm' => 1, 'xl' => 3]),
-                        Forms\Components\TextInput::make('whatsapp_url')->label('WhatsApp')->columnSpan(['sm' => 1, 'xl' => 3]),
+
+                        Forms\Components\TextInput::make('linkedin_url')->label('WhatsApp')->columnSpan(['sm' => 1, 'xl' => 4]),
+                        Forms\Components\TextInput::make('instagram_url')->label('URL Instagram')->columnSpan(['sm' => 1, 'xl' => 4]),
+                        Forms\Components\TextInput::make('twitter_x_url')->label('URL Twitter X')->columnSpan(['sm' => 1, 'xl' => 4]),
+                        Forms\Components\TextInput::make('facebook_url')->label('URL Facebook')->columnSpan(['sm' => 1, 'xl' => 4]),
+                        Forms\Components\TextInput::make('web_url')->label('URL Web')->columnSpan(['sm' => 1, 'xl' => 4]),
+
                         Forms\Components\RichEditor::make('biography')->required()->toolbarButtons(['bold', 'italic', 'link', 'undo', 'strike', 'h2', 'h3', 'orderList'])->label('Biografía')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),
                         Forms\Components\Textarea::make('iframe')->label('Iframe video')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),
                         Forms\Components\SpatieMediaLibraryFileUpload::make('featured_image')->label('Logo')->collection('main')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),

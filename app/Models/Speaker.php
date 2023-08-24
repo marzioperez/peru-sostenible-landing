@@ -29,6 +29,7 @@ class Speaker extends Model implements HasMedia, Sortable {
         'facebook_url',
         'linkedin_url',
         'twitter_url',
+        'twitter_x_url',
         'instagram_url',
         'email_url',
         'whatsapp_url',

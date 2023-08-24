@@ -22,13 +22,13 @@
 
                 <div class="form-group">
                     <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="text" name="email" id="email" wire:model="email" />
+                    <input type="text" name="email" id="email" wire:model="email" placeholder="Correo corporativo" />
                     @error('email') <span class="text-xs text-danger">{{ $message }}</span> @enderror
                 </div>
 
                 <div class="form-group">
                     <label for="phone" class="form-label">Celular</label>
-                    <input type="text" name="phone" id="phone" wire:model="phone" />
+                    <input type="text" name="phone" id="phone" wire:model="phone" placeholder="Únete a la comunidad de WhatsApp" />
                     @error('phone') <span class="text-xs text-danger">{{ $message }}</span> @enderror
                 </div>
 

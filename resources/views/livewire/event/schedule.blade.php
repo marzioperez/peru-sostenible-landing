@@ -6,16 +6,18 @@
     </div>
     <div class="container">
         <div class="grid grid-cols-12 gap-3">
-            @foreach($schedule_days as $schedule_day)
+            @foreach($schedule_days as $s => $schedule_day)
                 <div class="sm:col-span-2 col-span-4">
-                    <button wire:click.prevent="handleChangeDay({{$schedule_day['id']}})" class="btn {{($current_day_id === $schedule_day['id'] ? 'btn-purple' : 'btn-purple-outline')}} w-full">
+                    <button data-id="{{$schedule_day['id']}}" class="btn {{($s === 0 ? ' active' : '')}} w-full btn-change-day">
                         {{$schedule_day['day_number']}} {{$schedule_day['day_month_name']}}
                     </button>
                 </div>
             @endforeach
         </div>
-        <div>
-            <livewire:event.schedule-detail :schedule_day_id="$current_day_id" />
-        </div>
+        @foreach($schedule_days as $s => $schedule_day)
+            <div class="schedule-day{{($s === 0 ? ' active' : '')}} item-{{$schedule_day['id']}}">
+                <livewire:event.schedule-detail :schedule_day_id="$schedule_day['id']" />
+            </div>
+        @endforeach
     </div>
 </div>

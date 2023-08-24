@@ -65,6 +65,22 @@ $(document).ready(function(){
         $(".modal").hide();
     });
 
+    $('.panelist-group-header .show').on('click', function (e) {
+        e.preventDefault();
+        let id = $(this).data('id');
+        $(this).toggleClass('active');
+        $('.panelist-group-detail.item-' + id).toggleClass('active');
+    });
+
+    $('.btn-change-day').on('click', function (e) {
+        e.preventDefault();
+        let id = $(this).data('id');
+        $('.btn-change-day').removeClass('active');
+        $(this).toggleClass('active');
+        $('div.schedule-day').removeClass('active');
+        $('div.schedule-day.item-' + id).toggleClass('active');
+    });
+
     $('.open-allie-modal').on('click', function () {
         let allie = $(this).data('allie');
         let modal_allie = $(".modal-allie");
@@ -83,12 +99,16 @@ $(document).ready(function(){
             modal_allie_social.find('a.linkedin').show().attr('href', allie['linkedin_url']);
         }
 
-        if(allie['email_url']) {
-            modal_allie_social.find('a.email').show().attr('href', allie['email_url']);
+        if(allie['instagram_url']) {
+            modal_allie_social.find('a.instagram').show().attr('href', allie['instagram_url']);
         }
 
-        if(allie['whatsapp_url']) {
-            modal_allie_social.find('a.whatsapp').show().attr('href', allie['whatsapp_url']);
+        if(allie['web_url']) {
+            modal_allie_social.find('a.web').show().attr('href', allie['web_url']);
+        }
+
+        if(allie['twitter_x_url']) {
+            modal_allie_social.find('a.twitter-x').show().attr('href', allie['twitter_x_url']);
         }
 
         modal_allie.find('.modal-allie-embed').hide().html('');
@@ -120,12 +140,12 @@ $(document).ready(function(){
             modal_speaker_social.find('a.linkedin').show().attr('href', speaker['linkedin_url']);
         }
 
-        if(speaker['email_url']) {
-            modal_speaker_social.find('a.email').show().attr('href', speaker['email_url']);
+        if(speaker['twitter_url']) {
+            modal_speaker_social.find('a.twitter').show().attr('href', speaker['twitter_url']);
         }
 
-        if(speaker['whatsapp_url']) {
-            modal_speaker_social.find('a.whatsapp').show().attr('href', speaker['whatsapp_url']);
+        if(speaker['web_url']) {
+            modal_speaker_social.find('a.web').show().attr('href', speaker['web_url']);
         }
 
         if (speaker['activities'].length > 0) {
@@ -134,7 +154,7 @@ $(document).ready(function(){
                 modal_speaker_activities_list.append(
                     '<div class="row">' +
                         '<div class="column column-1">' + item['title'] +'</div>' +
-                        '<div class="column column-2">' + item['start'] +' a ' + item['end'] + '</div>' +
+                        '<div class="column column-2">' + item['start'].slice(0, -3) +' a ' + item['end'].slice(0, -3) + '</div>' +
                         '<div class="column column-3"></div>' +
                     '</div>'
                 );

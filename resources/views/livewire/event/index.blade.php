@@ -36,7 +36,7 @@
             <div class="col-span-4">
                 <div class="bg-[#DD4648] shadow-sm p-8 zoom-content">
                     <a href="{{route('about')}}">
-                        <h1 class="uppercase text-white">Sobre<br> el evento</h1>
+                        <h1 class="uppercase text-white ml-5">Sobre<br> el evento</h1>
                         <img src="{{asset('img/evento-1.png')}}" class="w-full" />
                     </a>
                 </div>
@@ -53,11 +53,13 @@
                     </div>
                 </div>
                 <div class="py-6 px-8 bg-[#921E4E] mt-6 shadow-sm h-fit">
-                    <h1 class="sm:text-6xl text-3xl text-white uppercase">Expositores</h1>
+                    <h1 class="sm:text-6xl text-3xl text-white uppercase">
+                        <a href="{{route('speakers')}}">Expositores</a>
+                    </h1>
                     <div class="slick-speakers">
                         @foreach($speakers as $speaker)
                             <div class="slick-speakers-item">
-                                <div class="w-[180px] h-[180px] bg-cover bg-center cursor-pointer open-modal-speaker" data-speaker="{{json_encode($speaker)}}" style="background-image: url('{{$speaker['image_url']}}')"></div>
+                                <div class="sm:w-[180px] mx-2 sm:h-[180px] h-[150px] bg-cover bg-no-repeat bg-center cursor-pointer open-modal-speaker" data-speaker="{{json_encode($speaker)}}" style="background-image: url('{{$speaker['image_url']}}')"></div>
                             </div>
                         @endforeach
                     </div>

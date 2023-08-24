@@ -18,6 +18,7 @@ class Index extends Component {
 
     public function mount() {
         $this->speakers = Speaker::with('activities')->ordered()->get();
+//        dd($this->speakers);
         $this->show_countdown = app(GeneralSettings::class)->show_countdown;
         $this->end_date_countdown = (app(GeneralSettings::class)->end_date_countdown ? app(GeneralSettings::class)->end_date_countdown : null);
         $this->show_users_number = app(GeneralSettings::class)->show_users_number;

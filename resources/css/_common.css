@@ -97,6 +97,43 @@ ul {
     @apply sm:text-md text-xs uppercase text-center font-bold -mt-3;
 }
 
+.panelist-group-header {
+    @apply flex items-center space-x-3;
+}
+
+.panelist-group-header .show {
+    @apply cursor-pointer;
+    transition: ease all 0.3s;
+}
+
+.panelist-group-header .show.active {
+    transform: rotate(90deg);
+}
+
+.panelist-group-detail.active {
+    @apply block;
+}
+
+.panelist-group-detail {
+    @apply hidden;
+}
+
+.schedule-day {
+    @apply hidden;
+}
+
+.schedule-day.active {
+    @apply block;
+}
+
+.btn-change-day {
+    @apply border border-purple bg-white shadow-sm text-purple;
+}
+
+.btn-change-day.active {
+    @apply border-transparent bg-purple text-white hover:bg-purple-dark;
+}
+
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);

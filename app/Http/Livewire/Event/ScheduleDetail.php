@@ -18,7 +18,7 @@ class ScheduleDetail extends Component {
     ];
 
     public function changeScheduleDay($id) {
-        $this->scheduleDay = ScheduleDay::with('activities.speaker')->find($id);
+        $this->scheduleDay = ScheduleDay::with('activities.speaker', 'activities.panelist_group.speakers.speaker')->find($id);
     }
 
     public function render() {

@@ -27,26 +27,27 @@
             </div>
             <div class="modal-body">
                 <div>
-                    <div class="grid grid-cols-12 mb-6 gap-5">
+                    <div class="sm:grid grid-cols-12 mb-6 gap-5">
                         <div class="col-span-4">
                             <div class="modal-speaker-image"></div>
                         </div>
-                        <div class="col-span-8 flex items-end">
+                        <div class="sm:col-span-8 sm:flex items-end">
                             <div>
                                 <h5 class="modal-speaker-name">Nombre Aliado</h5>
                                 <p class="modal-speaker-position">Cargo</p>
                                 <div class="modal-speaker-social">
-                                    <a href="#" class="modal-speaker-social-circle facebook" target="_blank">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </a>
                                     <a href="#" class="modal-speaker-social-circle linkedin" target="_blank">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </a>
-                                    <a href="#" class="modal-speaker-social-circle email" target="_blank">
-                                        <i class="fa fa-envelope"></i>
+                                    <a href="#" class="modal-speaker-social-circle facebook" target="_blank">
+                                        <i class="fa-brands fa-facebook-f"></i>
                                     </a>
-                                    <a href="#" class="modal-speaker-social-simple whatsapp" target="_blank">
-                                        <i class="fa-brands fa-whatsapp"></i>
+
+                                    <a href="#" class="modal-speaker-social-circle twitter" target="_blank">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="modal-speaker-social-circle web" target="_blank">
+                                        <i class="fa fa-globe"></i>
                                     </a>
                                 </div>
                             </div>
@@ -92,17 +93,20 @@
                             <div>
                                 <h5 class="modal-allie-name">Nombre Aliado</h5>
                                 <div class="modal-allie-social">
-                                    <a href="#" class="modal-allie-social-circle facebook" target="_blank">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </a>
                                     <a href="#" class="modal-allie-social-circle linkedin" target="_blank">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </a>
-                                    <a href="#" class="modal-allie-social-circle email" target="_blank">
-                                        <i class="fa fa-envelope"></i>
+                                    <a href="#" class="modal-allie-social-circle instagram" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
                                     </a>
-                                    <a href="#" class="modal-allie-social-simple whatsapp" target="_blank">
-                                        <i class="fa-brands fa-whatsapp"></i>
+                                    <a href="#" class="modal-allie-social-circle twitter-x" target="_blank">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                    <a href="#" class="modal-allie-social-circle facebook" target="_blank">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="modal-allie-social-circle web" target="_blank">
+                                        <i class="fa fa-globe"></i>
                                     </a>
                                 </div>
                             </div>
