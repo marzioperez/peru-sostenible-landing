@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Register extends Component {
 
-    public $first_name, $last_name, $email, $phone, $company, $accept_terms;
+    public $first_name, $last_name, $email, $phone, $company, $position, $accept_terms;
     public $commitments = [];
     public $commitments_options = User::COMMITMENTS;
     public $show_thanks = false;
@@ -45,6 +45,7 @@ class Register extends Component {
             'last_name' => $this->last_name,
             'phone' => $this->phone,
             'company' => $this->company,
+            'position' => $this->position,
             'email' => $this->email,
             'commitments' => $this->commitments,
             'password' => '123456',

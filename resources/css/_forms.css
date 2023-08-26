@@ -45,7 +45,7 @@ input[type="password"],
 input[type="date"],
 select,
 textarea{
-    @apply block w-full px-3 text-gray text-sm rounded-md border border-primary shadow-sm transition h-8 focus:border-primary-light focus:ring-0 focus:outline-none;
+    @apply block w-full px-3 text-gray text-sm rounded-md border border-primary shadow-sm transition h-9 focus:border-primary-light focus:ring-0 focus:outline-none;
 }
 
 textarea{
