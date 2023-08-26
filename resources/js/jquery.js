@@ -2,17 +2,29 @@ import 'slick-carousel';
 import {all} from "axios";
 $(document).ready(function(){
 
+    let header = $('header');
+    let menu_icon = $('header .menu-icon');
+    let menu_side = $('.menu-side');
     $(window).scroll(function() {
         if ($(this).scrollTop() > 10) {
-            $('header').addClass('header-fixed');
+            header.addClass('header-fixed');
+            if (!menu_side.hasClass('pt-12')) {
+                menu_side.find('.menu-options').addClass('pt-12');
+            }
         } else {
-            $('header').removeClass('header-fixed');
+            header.removeClass('header-fixed');
+            menu_icon.removeClass('active');
+            if (!menu_side.hasClass('pt-12')) {
+                menu_side.find('.menu-options').removeClass('pt-12');
+            }
         }
     });
 
-    $('header .menu-icon').on('click', function (){
-        $(this).toggleClass('active');
-        $('.menu-side').toggleClass('active');
+    menu_icon.on('click', function (){
+        if (!header.hasClass('header-fixed') && !header.hasClass('with-bg')) {
+            $(this).toggleClass('active');
+        }
+        menu_side.toggleClass('active');
     });
 
     $('.class-speaker-row').hover(function (){
@@ -131,7 +143,7 @@ $(document).ready(function(){
         modal_speaker.find('.modal-speaker-image').css('background-image', 'url('+ speaker['image_url'] +')');
 
         let modal_speaker_social = modal_speaker.find('.modal-speaker-social');
-        modal_speaker_social.find('a').show();
+        modal_speaker_social.find('a').hide();
         if(speaker['facebook_url']) {
             modal_speaker_social.find('a.facebook').show().attr('href', speaker['facebook_url']);
         }
@@ -142,6 +154,10 @@ $(document).ready(function(){
 
         if(speaker['twitter_url']) {
             modal_speaker_social.find('a.twitter').show().attr('href', speaker['twitter_url']);
+        }
+
+        if(speaker['instagram_url']) {
+            modal_speaker_social.find('a.instagram').show().attr('href', speaker['instagram_url']);
         }
 
         if(speaker['web_url']) {

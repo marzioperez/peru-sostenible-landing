@@ -21,7 +21,7 @@
             <div class="modal-header">
                 <div class="flex items-center space-x-3">
                     <div class="modal-close">
-                        <span class="text-white text-sm uppercase leading-none">Cerrar</span> <span class="text-[40px] font-light">&times;</span>
+                        <span class="text-[40px] font-light">&times;</span>
                     </div>
                 </div>
             </div>
@@ -42,9 +42,11 @@
                                     <a href="#" class="modal-speaker-social-circle facebook" target="_blank">
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </a>
-
                                     <a href="#" class="modal-speaker-social-circle twitter" target="_blank">
                                         <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="modal-speaker-social-circle instagram" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
                                     </a>
                                     <a href="#" class="modal-speaker-social-circle web" target="_blank">
                                         <i class="fa fa-globe"></i>
@@ -79,20 +81,20 @@
             <div class="modal-header">
                 <div class="flex items-center space-x-3">
                     <div class="modal-close">
-                        <span class="text-white text-sm uppercase leading-none">Cerrar</span> <span class="text-[40px] font-light">&times;</span>
+                        <span class="text-[40px] font-light">&times;</span>
                     </div>
                 </div>
             </div>
             <div class="modal-body">
                 <div>
-                    <div class="grid grid-cols-12 mb-6 gap-5">
+                    <div class="sm:grid grid-cols-12 mb-6 gap-5">
                         <div class="col-span-4">
                             <div class="modal-allie-image"></div>
                         </div>
-                        <div class="col-span-8 flex items-end">
+                        <div class="sm:col-span-8 sm:flex items-end">
                             <div>
                                 <h5 class="modal-allie-name">Nombre Aliado</h5>
-                                <div class="modal-allie-social">
+                                <div class="modal-allie-social sm:pt-0 pt-3">
                                     <a href="#" class="modal-allie-social-circle linkedin" target="_blank">
                                         <i class="fa-brands fa-linkedin-in"></i>
                                     </a>

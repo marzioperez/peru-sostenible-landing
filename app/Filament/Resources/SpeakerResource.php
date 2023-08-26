@@ -42,7 +42,7 @@ class SpeakerResource extends Resource
                         Forms\Components\TextInput::make('facebook_url')->label('URL Facebook')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('linkedin_url')->label('URL Linkedin')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('twitter_url')->label('URL Twitter')->columnSpan(['sm' => 1, 'xl' => 4]),
-                        //Forms\Components\TextInput::make('twitter_x_url')->label('URL Twitter X')->columnSpan(['sm' => 1, 'xl' => 4]),
+                        Forms\Components\TextInput::make('instagram_url')->label('URL Instagram')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('web_url')->label('URL Web')->columnSpan(['sm' => 1, 'xl' => 4]),
 
                         Forms\Components\RichEditor::make('biography')->required()->toolbarButtons(['bold', 'italic', 'link', 'undo', 'strike', 'h2', 'h3', 'orderList'])->label('Biografía')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),
@@ -64,6 +64,7 @@ class SpeakerResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\Action::make('up')
                     ->icon('heroicon-o-arrow-up')->label('')
                     ->action(fn (Speaker $record) => $record->moveOrderUp()),

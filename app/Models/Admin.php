@@ -33,10 +33,6 @@ class Admin extends Authenticatable {
         'initials'
     ];
 
-    public function setPasswordAttribute($value) {
-        $this->attributes["password"] = Hash::make($value);
-    }
-
     public function getInitialsAttribute() {
         $name = $this->name;
         $name_array = explode(' ', trim($name));

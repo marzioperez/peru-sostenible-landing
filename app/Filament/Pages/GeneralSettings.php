@@ -16,7 +16,7 @@ class GeneralSettings extends SettingsPage
 {
     protected static ?string $navigationIcon = 'heroicon-o-cog';
     protected static ?string $navigationLabel = 'Ajustes generales';
-    public static ?int $navigationSort = 1;
+    public static ?int $navigationSort = 2;
     protected static ?string $navigationGroup = 'Ajustes';
 
     protected static string $settings = \App\Settings\GeneralSettings::class;

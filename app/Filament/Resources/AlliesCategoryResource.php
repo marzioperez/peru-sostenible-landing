@@ -54,6 +54,7 @@ class AlliesCategoryResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\Action::make('up')
                     ->icon('heroicon-o-arrow-up')->label('')
                     ->action(fn (AlliesCategory $record) => $record->moveOrderUp()),

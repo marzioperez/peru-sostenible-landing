@@ -1,7 +1,7 @@
 <div class="w-full">
-    <div class="grid sm:grid-cols-4 grid-cols-2 gap-6">
+    <div class="grid sm:grid-cols-4 grid-cols-2 gap-3">
         @foreach($allies as $allie)
-            <div class="p-3">
+            <div>
                 <img src="{{$allie['image_url']}}" class="w-full mb-3 cursor-pointer open-allie-modal" data-allie="{{json_encode($allie)}}" alt="{{$allie['name']}}" />
             </div>
         @endforeach

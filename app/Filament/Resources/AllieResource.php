@@ -36,7 +36,7 @@ class AllieResource extends Resource
                         Forms\Components\TextInput::make('name')->required()->label('Nombre')->columnSpan(['sm' => 1, 'xl' => 7]),
                         Forms\Components\Select::make('allie_category_id')->label('Categoría')->options(AlliesCategory::all()->pluck('name', 'id'))->searchable()->columnSpan(5),
 
-                        Forms\Components\TextInput::make('linkedin_url')->label('WhatsApp')->columnSpan(['sm' => 1, 'xl' => 4]),
+                        Forms\Components\TextInput::make('linkedin_url')->label('URL Linkedin')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('instagram_url')->label('URL Instagram')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('twitter_x_url')->label('URL Twitter X')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('facebook_url')->label('URL Facebook')->columnSpan(['sm' => 1, 'xl' => 4]),
@@ -62,6 +62,7 @@ class AllieResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),

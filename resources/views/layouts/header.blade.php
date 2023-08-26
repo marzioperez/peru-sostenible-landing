@@ -23,7 +23,7 @@
     </div>
 </header>
 <div class="menu-side">
-    <div class="menu-options{{$header_relative ? '' : ' pt-12'}}">
+    <div class="menu-options {{$header_relative ? '' : ' pt-12'}}">
         <button type="button" class="btn btn-red-outline flex justify-between uppercase mb-6 open-modal" data-modal="login-modal">
             <span>Regístrate</span>
             <img src="{{asset('img/icono-arrow-diagonal-right-red.svg')}}" class="ml-3 h-[15px]" alt="Menu">
@@ -32,7 +32,7 @@
         <p><a href="{{route('home')}}" class="menu-option">Inicio</a></p>
         <p><a href="{{route('about')}}" class="menu-option">Sobre el evento</a></p>
         <p><a href="{{route('schedule')}}" class="menu-option">Agenda</a></p>
-        <p><a href="{{route('home')}}" class="menu-option">Más del evento</a></p>
+        <p><a href="{{route('home')}}" class="menu-option">Más detalles</a></p>
         <p><a href="{{route('speakers')}}" class="menu-option">Expositores</a></p>
         <p><a href="{{route('allies')}}" class="menu-option">Aliados</a></p>
         <p><a href="#" class="menu-option">En vivo</a></p>

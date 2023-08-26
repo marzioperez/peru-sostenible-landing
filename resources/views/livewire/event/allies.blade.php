@@ -5,10 +5,10 @@
         </div>
     </div>
     <div class="container">
-        <div class="grid grid-cols-12 gap-5 mb-5">
+        <div class="sm:flex grid grid-cols-12 justify-center gap-5 mb-5">
             @foreach($categories as $category)
                 <div class="sm:col-span-2 col-span-6">
-                    <button wire:click.prevent="handleChangeCategory({{$category['id']}})" class="btn uppercase {{($current_category_id === $category['id'] ? 'btn-purple' : 'btn-purple-outline')}} w-full">
+                    <button wire:click.prevent="handleChangeCategory({{$category['id']}})" class="btn min-w-[150px] uppercase {{($current_category_id === $category['id'] ? 'btn-purple' : 'btn-purple-outline')}} w-full">
                         {{$category['name']}}
                     </button>
                 </div>

@@ -3,11 +3,7 @@
 }
 
 .modal .modal-content {
-    @apply relative bg-white mx-auto my-[10%] max-w-[600px];
-}
-
-.modal .modal-content .modal-wrapper {
-    /*@apply flex flex-row-reverse justify-between;*/
+    @apply relative bg-white sm:mx-auto mx-5 my-[10%] max-w-[600px];
 }
 
 .modal .modal-content .modal-wrapper .modal-header {
@@ -19,13 +15,13 @@
 }
 
 .modal .modal-content .modal-wrapper .modal-body {
-    @apply flex flex-col gap-2 py-8 px-10;
+    @apply flex flex-col gap-2 py-8 sm:px-10 px-6;
 }
 
 /* Modal expositor y aliado */
 .modal-speaker-image,
 .modal-allie-image {
-    @apply w-full h-[210px] bg-gray-400 bg-no-repeat bg-cover bg-center;
+    @apply w-full h-[210px] bg-no-repeat bg-cover bg-center;
 }
 
 .modal-speaker-name,
