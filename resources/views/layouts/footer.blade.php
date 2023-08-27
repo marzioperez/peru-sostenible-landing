@@ -21,22 +21,22 @@
                 <div>
                     <p class="text-white text-center font-tiempos text-xl">Redes sociales</p>
                     <div class="flex items-center justify-center space-x-3">
-                        <a href="#" target="_blank" class="btn-social">
+                        <a href="https://www.linkedin.com/company/perusostenible/" target="_blank" class="btn-social">
                             <span class="fa-brands fa-linkedin"></span>
                         </a>
-                        <a href="#" target="_blank" class="btn-social">
+                        <a href="https://www.instagram.com/perusostenible_org" target="_blank" class="btn-social">
                             <span class="fa-brands fa-instagram"></span>
                         </a>
-                        <a href="#" target="_blank" class="btn-social">
+                        <a href="https://twitter.com/_perusostenible" target="_blank" class="btn-social">
                             <span class="fa-brands fa-twitter"></span>
                         </a>
-                        <a href="#" target="_blank" class="btn-social">
+                        <a href="https://www.facebook.com/PeruSostenible.org" target="_blank" class="btn-social">
                             <span class="fa-brands fa-facebook-f"></span>
                         </a>
-                        <a href="#" target="_blank" class="btn-social">
+                        <a href="https://www.youtube.com/@perusostenible6778" target="_blank" class="btn-social">
                             <span class="fa-brands fa-youtube"></span>
                         </a>
-                        <a href="#" target="_blank" class="btn-social">
+                        <a href="https://perusostenible.org/" target="_blank" class="btn-social">
                             <span class="fa-solid fa-globe"></span>
                         </a>
                     </div>
