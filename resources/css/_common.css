@@ -134,6 +134,10 @@ ul {
     @apply border-transparent bg-purple text-white hover:bg-purple-dark;
 }
 
+.link {
+    @apply underline text-[#019DF4] font-bold;
+}
+
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);

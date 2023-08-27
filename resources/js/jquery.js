@@ -166,6 +166,7 @@ $(document).ready(function(){
 
         if (speaker['activities'].length > 0) {
             let modal_speaker_activities_list = modal_speaker.find('.modal-speaker-activities-list');
+            modal_speaker_activities_list.empty();
             $.each(speaker['activities'], function (index, item) {
                 modal_speaker_activities_list.append(
                     '<div class="row">' +

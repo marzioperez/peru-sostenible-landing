@@ -32,7 +32,9 @@ class User extends Authenticatable
         'email',
         'commitments',
         'password',
-        'token'
+        'token',
+        'accept_terms',
+        'accept_policy_data'
     ];
 
     /**

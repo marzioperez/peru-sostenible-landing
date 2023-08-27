@@ -8,7 +8,7 @@ use Livewire\Component;
 
 class Register extends Component {
 
-    public $first_name, $last_name, $email, $phone, $company, $position, $accept_terms;
+    public $first_name, $last_name, $email, $phone, $company, $position, $accept_terms, $accept_policy_data;
     public $commitments = [];
     public $commitments_options = User::COMMITMENTS;
     public $show_thanks = false;
@@ -19,7 +19,8 @@ class Register extends Component {
         'last_name' => 'required',
         'email' => 'required|email|unique:users',
         'phone' => 'required|numeric',
-        "accept_terms" => "required"
+        "accept_terms" => "accepted",
+        "accept_policy_data" => "accepted"
     ];
 
     protected $messages = [
@@ -29,7 +30,8 @@ class Register extends Component {
         'email.email' => "Campo incorrecto",
         'email.unique' => "El correo ya existe",
         'phone.required' => "Campo obligatorio",
-        "accept_terms.required" => "Debes aceptar los términos y condiciones"
+        "accept_terms.accepted" => "Debes aceptar los términos y condiciones y políticas de privacidad",
+        'accept_policy_data.accepted' => 'Debes aceptar la política de tratamiento de datos personales'
     ];
 
     public function process() {
@@ -49,7 +51,9 @@ class Register extends Component {
             'email' => $this->email,
             'commitments' => $this->commitments,
             'password' => '123456',
-            'token' => $token
+            'token' => $token,
+            'accept_terms' => $this->accept_terms,
+            'accept_policy_data' => $this->accept_policy_data
         ]);
 
         $this->show_thanks = true;

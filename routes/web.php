@@ -21,3 +21,5 @@ Route::get('/agenda', \App\Http\Livewire\Event\Schedule::class)->name('schedule'
 Route::get('/expositores', \App\Http\Livewire\Event\Speakers::class)->name('speakers');
 Route::get('/aliados', \App\Http\Livewire\Event\Allies::class)->name('allies');
 Route::get('/terminos-y-condiciones', \App\Http\Livewire\TermsAndConditions::class)->name('terms-and-conditions');
+Route::get('/politicas-de-privacidad', \App\Http\Livewire\PrivacyPolicies::class)->name('privacy-policies');
+Route::get('/politica-de-tratamiento-de-proteccion-de-datos-personales', \App\Http\Livewire\PersonalProtectionData::class)->name('personal-protection-data');

@@ -58,13 +58,27 @@
                 <div class="mt-3 w-100">
                     <div class="form-check">
                         <input type="checkbox" name="accept_terms" class="form-check-input" id="accept_terms" wire:model="accept_terms">
-                        <label class="form-check-label fs-12px" for="accept_terms" >Acepto los Términos y condiciones</label>
+                        <label class="form-check-label fs-12px" for="accept_terms" >Acepto los <a href="{{route('terms-and-conditions')}}" class="link" target="_blank">términos y condiciones</a> y <a href="{{route('privacy-policies')}}" class="link" target="_blank">políticas de privacidad</a></label>
                     </div>
                     @error('accept_terms') <span class="text-danger fs-12px">{{ $message }}</span> @enderror
                 </div>
 
-                <div class="col-span-2 flex justify-center pt-3">
-                    <button type="submit" class="btn btn-red-outline uppercase">Enviar</button>
+                <div class="mt-3 w-100">
+                    <div class="form-check">
+                        <input type="checkbox" name="accept_policy_data" class="form-check-input" id="accept_policy_data" wire:model="accept_policy_data">
+                        <label class="form-check-label fs-12px" for="accept_policy_data" >Acepto la <a href="{{route('personal-protection-data')}}" class="link" target="_blank">política de tratamiento de datos personales</a></label>
+                    </div>
+                    @error('accept_policy_data') <span class="text-danger fs-12px">{{ $message }}</span> @enderror
+                </div>
+
+                <div class="pt-5 sm:grid grid-cols-12">
+                    <div class="col-span-3">
+                        <button type="submit" class="btn btn-red-outline uppercase w-full">Enviar</button>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center space-x-3">
+                    <span class="text-red">*</span>
+                    <span class="text-gray-400 uppercase">Campos obligatorios</span>
                 </div>
             </div>
         </form>

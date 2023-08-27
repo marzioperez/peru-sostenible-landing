@@ -201,58 +201,15 @@ input[type='checkbox']:checked {
     @apply text-gray;
 }
 
+.form-check {
+    @apply flex items-center space-x-3 w-full p-3 rounded-md bg-gray-200;
+}
 
+.form-check-label {
+    @apply leading-none pt-2;
+}
 
 /*///// Otros /////*/
-
-.otp-input {
-    @apply w-12 h-14 mr-4 text-4xl !important;
-}
-
-.otp-input.otp-big {
-    @apply w-full h-14 mr-4 text-4xl !important;
-}
-
-.vue-tags-input {
-    @apply max-w-full !important;
-}
-
-.vue-tags-input .ti-input {
-    @apply block w-full px-6 text-gray text-sm rounded-md border border-gray-200 shadow-sm transition focus:border-gray-400 focus:ring-0 focus:outline-none !important;
-}
-
-.vue-tags-input .ti-input .ti-tags .ti-new-tag-input-wrapper {
-    @apply p-0 !important;
-}
-
-.vue-tags-input .ti-input .ti-tags .ti-new-tag-input-wrapper input {
-    @apply h-8 shadow-none !important;
-}
-
-.vue-tags-input .ti-autocomplete {
-    @apply border-gray-200 shadow-sm rounded-b-md !important;
-}
-
-.vue-tags-input .ti-autocomplete ul {
-    @apply h-17 overflow-y-scroll;
-}
-
-.vue-tags-input .ti-autocomplete li div {
-    @apply h-9 px-6 flex items-center py-0 !important;
-}
-
-.vue-tags-input .ti-autocomplete li.ti-selected-item {
-    @apply bg-gray-100 text-gray !important;
-}
-
-.vue-tags-input .ti-input .ti-tags .ti-tag {
-    @apply bg-gray-100 text-gray px-3 py-2 rounded-md font-medium text-sm !important;
-}
-
-.vue-tags-input .ti-input .ti-tags .ti-tag .ti-actions {
-    @apply ml-3 text-base text-gray-400 !important;
-}
-
 .group-selector{
     @apply flex only-sm:flex-col justify-between items-center gap-4 my-4;
 }
