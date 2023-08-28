@@ -65,7 +65,8 @@ class UserResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('first_name')->label('Nombre'),
                 Tables\Columns\TextColumn::make('last_name')->label('Apellidos'),
-                Tables\Columns\TextColumn::make('email')->label('Correo electrónico'),
+                Tables\Columns\TextColumn::make('email')->label('E-mail'),
+                Tables\Columns\TextColumn::make('created_at')->label('Fecha de registro')->dateTime('d/m/Y')->sortable(),
             ])
             ->filters([
                 //

@@ -102,6 +102,10 @@ $(document).ready(function(){
         $('div.category-allies.item-' + id).toggleClass('active');
     });
 
+    $('.open-contact-modal').on('click', function () {
+        $(".modal-contact").show();
+    });
+
     $('.open-allie-modal').on('click', function () {
         let allie = $(this).data('allie');
         let modal_allie = $(".modal-allie");
