@@ -12,7 +12,7 @@
     <div class="container py-10">
         <div class="sm:grid grid-cols-3">
             <div class="flex justify-center items-center">
-                <button type="button" class="btn btn-white uppercase font-semibold btn-xl open-contact-modal">¡Queremos escucharte!</button>
+                <button type="button" class="btn btn-white uppercase font-semibold btn-xl open-modal" data-modal="modal-contact" >¡Queremos escucharte!</button>
             </div>
             <div class="flex justify-center items-center sm:pt-0 pt-10">
                 <img src="{{asset('img/logo-evento.svg')}}" alt="{{config('app.name')}}">

@@ -15,7 +15,7 @@
     </div>
 </div>
 
-<div class="modal modal-contact">
+<div class="modal" id="modal-contact">
     <div class="modal-content">
         <div class="modal-wrapper">
             <div class="modal-header">
