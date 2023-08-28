@@ -93,6 +93,15 @@ $(document).ready(function(){
         $('div.schedule-day.item-' + id).toggleClass('active');
     });
 
+    $('.btn-change-category-allies').on('click', function (e) {
+        e.preventDefault();
+        let id = $(this).data('id');
+        $('.btn-change-category-allies').removeClass('active');
+        $(this).toggleClass('active');
+        $('div.category-allies').removeClass('active');
+        $('div.category-allies.item-' + id).toggleClass('active');
+    });
+
     $('.open-allie-modal').on('click', function () {
         let allie = $(this).data('allie');
         let modal_allie = $(".modal-allie");

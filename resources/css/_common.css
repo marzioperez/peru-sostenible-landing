@@ -118,19 +118,27 @@ ul {
     @apply hidden;
 }
 
-.schedule-day {
+.schedule-day,
+.category-allies {
     @apply hidden;
 }
 
-.schedule-day.active {
+.schedule-day.active,
+.category-allies.active {
     @apply block;
 }
 
-.btn-change-day {
-    @apply border border-purple bg-white shadow-sm text-purple;
+.btn-change-day,
+.btn-change-category-allies {
+    @apply border border-purple bg-white shadow-sm text-purple hover:bg-purple hover:text-white;
 }
 
-.btn-change-day.active {
+.btn-change-category-allies {
+    @apply min-w-[150px];
+}
+
+.btn-change-day.active,
+.btn-change-category-allies.active {
     @apply border-transparent bg-purple text-white hover:bg-purple-dark;
 }
 

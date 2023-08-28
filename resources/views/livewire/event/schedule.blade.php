@@ -8,7 +8,7 @@
         <div class="grid grid-cols-12 gap-3">
             @foreach($schedule_days as $s => $schedule_day)
                 <div class="sm:col-span-2 col-span-4">
-                    <button data-id="{{$schedule_day['id']}}" class="btn {{($s === 0 ? ' active' : '')}} w-full btn-change-day">
+                    <button data-id="{{$schedule_day['id']}}" class="btn {{($s === 0 ? ' active' : '')}} btn-change-day">
                         {{$schedule_day['day_number']}} {{$schedule_day['day_month_name']}}
                     </button>
                 </div>
