@@ -166,6 +166,8 @@ $(document).ready(function(){
 
         let modal_speaker_activities_list = modal_speaker.find('.modal-speaker-activities-list');
         modal_speaker_activities_list.empty();
+
+        let show_activities = false;
         if (speaker['activities'].length > 0) {
             $.each(speaker['activities'], function (index, item) {
                 modal_speaker_activities_list.append(
@@ -176,6 +178,27 @@ $(document).ready(function(){
                     '</div>'
                 );
             });
+        }
+
+        if (speaker['groups'].length > 0) {
+            $.each(speaker['groups'], function (index, group) {
+                if (group['activities'].length > 0) {
+                    $.each(group['activities'], function (index, item) {
+                        if (item['presentation_type'] === "PANELIST_GROUP") {
+                            modal_speaker_activities_list.append(
+                                '<div class="row">' +
+                                '<div class="column column-1">' + item['title'] +'</div>' +
+                                '<div class="column column-2">' + item['start'].slice(0, -3) +' a ' + item['end'].slice(0, -3) + '</div>' +
+                                '<div class="column column-3"></div>' +
+                                '</div>'
+                            );
+                        }
+                    });
+                }
+            });
+        }
+
+        if (show_activities) {
             modal_speaker.find('modal-speaker-activities').show();
         } else {
             modal_speaker.find('modal-speaker-activities').hide();

@@ -65,4 +65,8 @@ class Speaker extends Model implements HasMedia, Sortable {
     public function activities(): HasMany{
         return $this->hasMany(ScheduleActivity::class, 'speaker_id', 'id');
     }
+
+    public function groups(): HasMany {
+        return $this->hasMany(SpeakerPanelistGroup::class, 'speaker_id', 'id');
+    }
 }

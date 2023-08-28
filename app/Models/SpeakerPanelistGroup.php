@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\EloquentSortable\Sortable;
@@ -21,6 +22,10 @@ class SpeakerPanelistGroup extends Model implements Sortable {
 
     public function speaker(): HasOne {
         return $this->hasOne(Speaker::class,'id', 'speaker_id');
+    }
+
+    public function activities(): HasMany {
+        return $this->hasMany(ScheduleActivity::class, 'panelist_group_id', 'panelist_group_id');
     }
 
     public $sortable = [
