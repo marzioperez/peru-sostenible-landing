@@ -3,6 +3,26 @@
         <div class="sm:py-12 py-5">
             <img src="{{asset('img/gracias-registrate.svg')}}" class="mb-8">
             <p class="font-bold text-center text-gray text-xl font-tiempos">Añadir al calendario</p>
+            <div class="flex items-center justify-center">
+                <a href="https://www.addevent.com/calendar/aW483599+apple" title="Apple" target="_blank" style="display:inline;">
+                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-apple-t1.png" alt="Apple" width="45" border="0" style="width:45px;display:inline;" />
+                </a>
+                <a href="https://www.addevent.com/calendar/aW483599+google" title="Google" target="_blank" style="display:inline;">
+                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-google-t1.png" alt="Google" width="45" border="0" style="width:45px;display:inline;" />
+                </a>
+                <a href="https://www.addevent.com/calendar/aW483599+office365" title="Office 365" target="_blank" style="display:inline;">
+                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-office365-t1.png" alt="Office 365" width="45" border="0" style="width:45px;display:inline;" />
+                </a>
+                <a href="https://www.addevent.com/calendar/aW483599+outlook" title="Outlook" target="_blank" style="display:inline;">
+                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-outlook-t1.png" alt="Outlook" width="45" border="0" style="width:45px;display:inline;" />
+                </a>
+                <a href="https://www.addevent.com/calendar/aW483599+outlookcom" title="Outlook.com" target="_blank" style="display:inline;">
+                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-outlookcom-t1.png" alt="Outlook.com" width="45" border="0" style="width:45px;display:inline;" />
+                </a>
+                <a href="https://www.addevent.com/calendar/aW483599+yahoo" title="Yahoo" target="_blank" style="display:inline;">
+                    <img src="https://cdn.addevent.com/libs/imgs/icon-emd-share-yahoo-t1.png" alt="Yahoo" width="45" border="0" style="width:45px;display:inline;" />
+                </a>
+            </div>
         </div>
     @else
         <img src="{{asset('img/registrate.svg')}}" class="mb-4">

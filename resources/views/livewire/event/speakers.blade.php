@@ -4,7 +4,7 @@
             <h1 class="text-[#3E3C4F] sm:text-8xl text-4xl leading-none mb-0 uppercase text-center">Expositores</h1>
         </div>
     </div>
-    <div class="container">
+    <div class="container sm:pb-10 pb-6">
         <div class="grid sm:grid-cols-4 grid-cols-2">
             @foreach($speakers as $speaker)
                 <div class="p-3">
