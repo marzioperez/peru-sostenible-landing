@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="modal-body">
-                <livewire:event.contact />
+                <livewire:event.contact-form />
             </div>
         </div>
     </div>
