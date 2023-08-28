@@ -164,9 +164,9 @@ $(document).ready(function(){
             modal_speaker_social.find('a.web').show().attr('href', speaker['web_url']);
         }
 
+        let modal_speaker_activities_list = modal_speaker.find('.modal-speaker-activities-list');
+        modal_speaker_activities_list.empty();
         if (speaker['activities'].length > 0) {
-            let modal_speaker_activities_list = modal_speaker.find('.modal-speaker-activities-list');
-            modal_speaker_activities_list.empty();
             $.each(speaker['activities'], function (index, item) {
                 modal_speaker_activities_list.append(
                     '<div class="row">' +
@@ -176,9 +176,9 @@ $(document).ready(function(){
                     '</div>'
                 );
             });
-            modal_speaker_social.find('modal-speaker-activities').show();
+            modal_speaker.find('modal-speaker-activities').show();
         } else {
-            modal_speaker_social.find('modal-speaker-activities').hide();
+            modal_speaker.find('modal-speaker-activities').hide();
         }
 
         $('body').toggleClass('overflow-hidden');

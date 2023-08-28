@@ -32,7 +32,7 @@
         <p><a href="{{route('home')}}" class="menu-option">Inicio</a></p>
         <p><a href="{{route('about')}}" class="menu-option">Sobre el evento</a></p>
         <p><a href="{{route('schedule')}}" class="menu-option">Agenda</a></p>
-        <p><a href="{{route('home')}}" class="menu-option">Más detalles</a></p>
+        <p><a href="{{route('more-details')}}" class="menu-option">Más detalles</a></p>
         <p><a href="{{route('speakers')}}" class="menu-option">Expositores</a></p>
         <p><a href="{{route('allies')}}" class="menu-option">Aliados</a></p>
         <p><a href="#" class="menu-option">En vivo</a></p>
@@ -50,7 +50,7 @@
                 <span class="fa-brands fa-instagram"></span>
             </a>
             <a href="https://twitter.com/_perusostenible" target="_blank" class="btn-social-menu">
-                <span class="fa-brands fa-twitter"></span>
+                <span class="fa-brands fa-x-twitter"></span>
             </a>
             <a href="https://www.facebook.com/PeruSostenible.org" target="_blank" class="btn-social-menu">
                 <span class="fa-brands fa-facebook-f"></span>

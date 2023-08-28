@@ -28,7 +28,7 @@
                             <span class="fa-brands fa-instagram"></span>
                         </a>
                         <a href="https://twitter.com/_perusostenible" target="_blank" class="btn-social">
-                            <span class="fa-brands fa-twitter"></span>
+                            <span class="fa-brands fa-x-twitter"></span>
                         </a>
                         <a href="https://www.facebook.com/PeruSostenible.org" target="_blank" class="btn-social">
                             <span class="fa-brands fa-facebook-f"></span>

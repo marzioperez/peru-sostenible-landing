@@ -34,22 +34,23 @@ class UserResource extends Resource
                         'default' => 1,
                         'sm' => 3,
                         'xl' => 12,
-                        '2xl' => 8
+                        '2xl' => 12
                     ])->schema([
                         Forms\Components\TextInput::make('first_name')->required()->label('Nombre')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('last_name')->required()->label('Apellidos')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('phone')->label('Celular')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('company')->label('Empresa')->columnSpan(['sm' => 1, 'xl' => 4]),
+                        Forms\Components\TextInput::make('position')->label('Cargo')->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TextInput::make('email')->email()->required()
                             ->unique(ignorable: fn($record) => $record )
                             ->label('E-mail')->columnSpan(['sm' => 1, 'xl' => 4]),
-                        Forms\Components\TextInput::make('password')
-                            ->password()
-                            ->dehydrateStateUsing(fn($state) => Hash::make($state))
-                            ->dehydrated(fn($state) => filled($state))
-                            ->required(fn(Page $livewire) => ($livewire instanceof CreateRecord))
-                            ->label('Contraseña')
-                            ->columnSpan(['sm' => 1, 'xl' => 4]),
+//                        Forms\Components\TextInput::make('password')
+//                            ->password()
+//                            ->dehydrateStateUsing(fn($state) => Hash::make($state))
+//                            ->dehydrated(fn($state) => filled($state))
+//                            ->required(fn(Page $livewire) => ($livewire instanceof CreateRecord))
+//                            ->label('Contraseña')
+//                            ->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TagsInput::make('commitments')->label('Compromisos')->suggestions([
                             'Resiliencia', 'Respeto', 'Tolerancia', 'Esfuerzo', 'Empatía', 'Transparencia', 'Sostenibilidad', 'Colaboración'
                         ])->columnSpan(['sm' => 1, 'xl' => 12])

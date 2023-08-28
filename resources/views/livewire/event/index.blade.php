@@ -48,9 +48,11 @@
                             <h1 class="uppercase sm:text-6xl text-3xl text-white">Agenda</h1>
                         </div>
                     </a>
-                    <div class="bg-[#F2C0D7] p-8 sm:h-[220px] shadow-sm flex items-center zoom-content">
-                        <h2 class="mb-0 uppercase sm:text-5xl text-2xl text-[#921E4E]">Más<br>detalles</h2>
-                    </div>
+                    <a href="{{route('more-details')}}">
+                        <div class="bg-[#F2C0D7] zoom-content p-8 sm:h-[220px] shadow-sm flex items-center zoom-content">
+                            <h2 class="mb-0 uppercase sm:text-5xl text-2xl text-[#921E4E]">Más<br>detalles</h2>
+                        </div>
+                    </a>
                 </div>
                 <div class="py-6 px-8 bg-[#921E4E] mt-6 shadow-sm h-fit">
                     <h1 class="sm:text-6xl text-3xl text-white uppercase">
