@@ -11,7 +11,7 @@ class Register extends Component {
     public $first_name, $last_name, $email, $phone, $company, $position, $accept_terms, $accept_policy_data;
     public $commitments = [];
     public $commitments_options = User::COMMITMENTS;
-    public $show_thanks = true;
+    public $show_thanks = false;
     public $error_commitments = null;
 
     protected $rules = [
