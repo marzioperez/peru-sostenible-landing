@@ -5,9 +5,9 @@
         </div>
     </div>
     <div class="container">
-        <div class="grid grid-cols-12 gap-3">
+        <div class="sm:flex grid grid-cols-12 gap-5 mb-5">
             @foreach($schedule_days as $s => $schedule_day)
-                <div class="sm:col-span-2 col-span-4">
+                <div class="sm:col-span-2 col-span-6">
                     <button data-id="{{$schedule_day['id']}}" class="btn {{($s === 0 ? ' active' : '')}} btn-change-day">
                         {{$schedule_day['day_number']}} {{$schedule_day['day_month_name']}}
                     </button>

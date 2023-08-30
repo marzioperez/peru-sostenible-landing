@@ -133,8 +133,12 @@ ul {
     @apply border border-purple bg-white shadow-sm text-purple hover:bg-purple hover:text-white;
 }
 
+.btn-change-day {
+    @apply sm:min-w-[100px] w-full;
+}
+
 .btn-change-category-allies {
-    @apply min-w-[150px];
+    @apply sm:min-w-[150px] w-full;
 }
 
 .btn-change-day.active,
