@@ -34,10 +34,14 @@
                     <div class="col-span-2"></div>
                     <div class="col-span-8 w-full flex justify-center items-center sm:py-8 py-6 space-x-3">
                         <div>
-                            <img src="{{asset('img/pdf.svg')}}" />
+                            <a href="{{asset('pdf/mapa-peru-sostenible-1.pdf')}}" target="_blank">
+                                <img src="{{asset('img/pdf.svg')}}" />
+                            </a>
                         </div>
                         <div>
-                            <p class="mb-0">Descargar <b class="uppercase">plano del evento</b></p>
+                            <a href="{{asset('pdf/mapa-peru-sostenible-1.pdf')}}" target="_blank">
+                                <p class="mb-0">Descargar <b class="uppercase">plano del evento</b></p>
+                            </a>
                         </div>
                     </div>
                     <div class="col-span-2"></div>
@@ -47,10 +51,14 @@
                     <div class="col-span-2"></div>
                     <div class="col-span-8 w-full flex justify-center items-center sm:py-8 py-6 space-x-3">
                         <div>
-                            <img src="{{asset('img/pdf.svg')}}" />
+                            <a href="{{asset('pdf/guia-del-pasajero-1.pdf')}}" target="_blank">
+                                <img src="{{asset('img/pdf.svg')}}" />
+                            </a>
                         </div>
                         <div>
-                            <p class="mb-0"><b class="uppercase">Guía</b> de pasajero sostenible</p>
+                            <a href="{{asset('pdf/guia-del-pasajero-1.pdf')}}" target="_blank">
+                                <p class="mb-0"><b class="uppercase">Guía</b> de pasajero sostenible</p>
+                            </a>
                         </div>
                     </div>
                     <div class="col-span-2"></div>
