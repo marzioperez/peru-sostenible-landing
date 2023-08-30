@@ -146,6 +146,22 @@ ul {
     @apply underline text-[#019DF4] font-bold;
 }
 
+.add-event-button {
+    @apply border-0 p-3 text-center !important;
+}
+
+.add-event-button b {
+    @apply text-[8px] uppercase;
+}
+
+.add-event-button img {
+    @apply h-[32px] w-full;
+}
+
+.add-event-button .addeventatc_icon {
+    @apply hidden !important;
+}
+
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);

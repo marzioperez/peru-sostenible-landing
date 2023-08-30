@@ -15,6 +15,7 @@
         <link rel="icon" type="image/png" href="{{asset('img/favicom/iso_192x192.png')}}" sizes="192x192" />
         <link rel="apple-touch-icon" href="https://perusostenible.org/wp-content/uploads/2022/01/perusosteniblefavicon.png" />
         <meta name="msapplication-TileImage" content="https://perusostenible.org/wp-content/uploads/2022/01/perusosteniblefavicon.png" />
+        <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
         <title>{{config('app.name')}}</title>
         @vite('resources/js/app.js')
         @livewireStyles

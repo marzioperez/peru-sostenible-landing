@@ -43,7 +43,14 @@
                             <div class="col-span-3 flex items-center border-b-2 border-red py-3">
                                 <p class="mb-0">{{date('h:i', strtotime($activity['start']))}} a {{date('h:i', strtotime($activity['end']))}}</p>
                             </div>
-                            <div class="flex items-center border-b-2 border-red py-3"></div>
+                            <div class="flex items-center border-b-2 border-red py-3">
+                                @if($activity['add_event_id'])
+                                    <a class="add-event-button addeventatc" style="box-shadow: none !important;" data-id="{{$activity['add_event_id']}}" href="https://www.addevent.com/event/{{$activity['add_event_id']}}" target="_blank">
+                                        <b>Add event</b>
+                                        <img src="{{asset('img/icono-add-event.svg')}}" />
+                                    </a>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 @endforeach
