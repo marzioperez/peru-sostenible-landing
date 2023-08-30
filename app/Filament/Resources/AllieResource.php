@@ -43,7 +43,7 @@ class AllieResource extends Resource
                         Forms\Components\TextInput::make('web_url')->label('URL Web')->columnSpan(['sm' => 1, 'xl' => 4]),
 
                         Forms\Components\RichEditor::make('biography')->required()->toolbarButtons(['bold', 'italic', 'link', 'undo', 'strike', 'h2', 'h3', 'orderList'])->label('Biografía')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),
-                        Forms\Components\Textarea::make('iframe')->label('Iframe video')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),
+                        Forms\Components\Textarea::make('iframe')->label('Iframe video')->helperText('Modificar el valor del parámetro width de 560 a 100%.')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),
                         Forms\Components\SpatieMediaLibraryFileUpload::make('featured_image')->label('Logo')->collection('main')->columnSpanFull()->columnSpan(['sm' => 1, 'xl' => 12]),
                     ])
                 ])
