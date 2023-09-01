@@ -24,6 +24,11 @@ class ImportUsers extends Component {
         return redirect()->to('/admin/users');
     }
 
+    public function export() {
+        $time = time();
+        return Excel::download(new \App\Exports\Users(), "usuarios-{$time}.xlsx");
+    }
+
     public function render() {
         return view('livewire.filament.import-users');
     }
