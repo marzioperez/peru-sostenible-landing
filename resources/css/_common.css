@@ -119,17 +119,20 @@ ul {
 }
 
 .schedule-day,
-.category-allies {
+.category-allies,
+.category-videos {
     @apply hidden;
 }
 
 .schedule-day.active,
-.category-allies.active {
+.category-allies.active,
+.category-videos.active {
     @apply block;
 }
 
 .btn-change-day,
-.btn-change-category-allies {
+.btn-change-category-allies,
+.btn-change-category-videos {
     @apply border border-purple bg-white shadow-sm text-purple hover:bg-purple hover:text-white;
 }
 
@@ -141,8 +144,13 @@ ul {
     @apply sm:min-w-[150px] w-full;
 }
 
+.btn-change-category-videos {
+    @apply sm:min-w-[180px] w-full;
+}
+
 .btn-change-day.active,
-.btn-change-category-allies.active {
+.btn-change-category-allies.active,
+.btn-change-category-videos.active {
     @apply border-transparent bg-purple text-white hover:bg-purple-dark;
 }
 
@@ -164,6 +172,10 @@ ul {
 
 .add-event-button .addeventatc_icon {
     @apply hidden !important;
+}
+
+.open-video {
+    @apply cursor-pointer relative transition-all hover:opacity-90;
 }
 
 @keyframes move-forever {

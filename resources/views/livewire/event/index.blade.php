@@ -96,9 +96,11 @@
                         <div class="bg-red h-[15px] w-[15px] rounded-full absolute top-4 right-4"></div>
                         <p class="font-bold text-[#921E4E] uppercase leading-none sm:text-6xl text-3xl mb-0">En<br class="hidden sm:block" /> vivo</p>
                     </div>
-                    <div class="bg-[#25254E] px-3 py-6 flex items-center justify-center sm:h-[215px]">
-                        <p class="text-white uppercase leading-none sm:text-4xl text-xl mb-0">Revive las <br class="hidden sm:block" /><b>sesiones</b></p>
-                    </div>
+                    <a href="{{route('videos')}}">
+                        <div class="bg-[#25254E] zoom-content px-3 py-6 flex items-center justify-center sm:h-[215px]">
+                            <h2 class="text-white uppercase leading-none sm:text-4xl text-xl mb-0">Revive las <br class="hidden sm:block" /><b>sesiones</b></h2>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

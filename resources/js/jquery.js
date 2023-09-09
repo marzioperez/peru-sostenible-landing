@@ -102,8 +102,21 @@ $(document).ready(function(){
         $('div.category-allies.item-' + id).toggleClass('active');
     });
 
-    $('.open-contact-modal').on('click', function () {
-        $(".modal-contact").show();
+    $('.btn-change-category-videos').on('click', function (e) {
+        e.preventDefault();
+        let id = $(this).data('id');
+        $('.btn-change-category-videos').removeClass('active');
+        $(this).toggleClass('active');
+        $('div.category-videos').removeClass('active');
+        $('div.category-videos.item-' + id).toggleClass('active');
+    });
+
+    $('.open-video').on('click', function () {
+        let video = $(this).data('video');
+        let modal_video = $(".modal-video");
+        modal_video.find('.modal-vide-embed-content').html(video['embed']);
+        $('body').toggleClass('overflow-hidden');
+        modal_video.show();
     });
 
     $('.open-allie-modal').on('click', function () {
@@ -143,7 +156,6 @@ $(document).ready(function(){
 
         $('body').toggleClass('overflow-hidden');
         modal_allie.show();
-        console.log(allie);
     });
 
     $('.open-modal-speaker').on('click', function (){

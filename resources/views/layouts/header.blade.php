@@ -37,7 +37,7 @@
         <p><a href="{{route('allies')}}" class="menu-option">Aliados</a></p>
         <p><a href="#" class="menu-option">En vivo</a></p>
 {{--        <p class="py-3"><a href="{{route('home')}}" class="btn-live">En vivo</a></p>--}}
-        <p><a href="{{route('home')}}" class="menu-option">Revive las sesiones</a></p>
+        <p><a href="{{route('videos')}}" class="menu-option">Revive las sesiones</a></p>
         <p><a href="{{route('home')}}" class="menu-option">Galería</a></p>
     </div>
     <div class="menu-footer">

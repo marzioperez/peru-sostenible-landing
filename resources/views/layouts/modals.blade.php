@@ -142,3 +142,20 @@
         </div>
     </div>
 </div>
+
+<div class="modal modal-video">
+    <div class="modal-content">
+        <div class="modal-wrapper">
+            <div class="modal-header">
+                <div class="flex items-center space-x-3">
+                    <div class="modal-close">
+                        <span class="text-[40px] font-light">&times;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-vide-embed-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
