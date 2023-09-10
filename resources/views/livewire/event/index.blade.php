@@ -88,9 +88,11 @@
                 </a>
             </div>
             <div class="col-span-7">
-                <div class="bg-[#921E4E] p-8 h-[260px] flex items-center shadow-sm">
-                    <h1 class="uppercase text-white sm:text-6xl text-3xl leading-none">Ga<br class="hidden sm:block" />le<br class="hidden sm:block" />ría</h1>
-                </div>
+                <a href="{{route('gallery')}}">
+                    <div class="bg-[#921E4E] zoom-content p-8 h-[260px] flex items-center shadow-sm">
+                        <h1 class="uppercase text-white sm:text-6xl text-3xl leading-none">Ga<br class="hidden sm:block" />le<br class="hidden sm:block" />ría</h1>
+                    </div>
+                </a>
                 <div class="grid grid-cols-2 gap-6 mt-5">
                     <div class="bg-[#F2C0D7] px-5 pt-6 pb-3 flex items-end sm:h-[215px] relative">
                         <div class="bg-red h-[15px] w-[15px] rounded-full absolute top-4 right-4"></div>

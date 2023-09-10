@@ -17,7 +17,16 @@
                 <td>{{$user['phone']}}</td>
                 <td>{{$user['company']}}</td>
                 <td>{{$user['position']}}</td>
-                <td>@json($user['commitments'])</td>
+                <td>
+                    @if($user['commitments'])
+                        @php
+                            $commitments = $user['commitments'];
+                        @endphp
+                        @foreach($commitments as $commitment)
+                            {{$commitment . ($commitment === end($commitments) ? '' : ', ')}}
+                        @endforeach
+                    @endif
+                </td>
             </tr>
         @endforeach
     </tbody>

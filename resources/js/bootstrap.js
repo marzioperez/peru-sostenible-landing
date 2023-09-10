@@ -6,7 +6,6 @@
 import Alpine from 'alpinejs';
 import axios from 'axios';
 import jQuery from 'jquery';
-// import slick from 'slick-carousel';
 import Popper from 'popper.js';
 import anychart from 'anychart/dist/js/anychart-bundle.min';
 
