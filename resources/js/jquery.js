@@ -1,15 +1,6 @@
 import 'slick-carousel';
-import Masonry from 'masonry-layout';
 
 $(document).ready(function(){
-
-    let elem = document.querySelector('.masonry');
-    new Masonry( elem, {
-        itemSelector: '.masonry-item',
-        columnWidth: 80,
-        percentPosition: true,
-        gutter: 0
-    });
 
     let header = $('header');
     let menu_icon = $('header .menu-icon');

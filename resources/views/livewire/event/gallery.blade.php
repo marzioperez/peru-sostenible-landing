@@ -5,12 +5,15 @@
         </div>
     </div>
     <div class="container sm:pb-6 pb-10">
-        <div class="masonry">
+        <div class="columns-3xs">
             @foreach($photos as $p => $photo)
-                <div class="masonry-item">
+                <div class="w-full aspect-video">
                     <img src="{{$photo['image_url']}}" class="w-full" />
                 </div>
             @endforeach
         </div>
     </div>
 </div>
+@push('scripts')
+
+@endpush

@@ -178,10 +178,6 @@ ul {
     @apply cursor-pointer relative transition-all hover:opacity-90;
 }
 
-.masonry-item {
-    @apply inline-block p-3;
-}
-
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);
