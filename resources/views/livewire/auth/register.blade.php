@@ -2,6 +2,11 @@
     @if($show_thanks)
         <div class="sm:py-12 py-5">
             <img src="{{asset('img/gracias-registrate.svg')}}" class="mb-8">
+
+            <p class="font-bold font-tiempos mb-3">Importante:</p>
+            <p class="text-gray mb-2">- Se solicitará DNI (o carnet de extranjería) de manera obligatoria para el ingreso al evento y se realizará reconocimiento facial por temas de seguridad.</p>
+            <p class="text-gray">- Aforo limitado.</p>
+
             <p class="font-bold text-center text-gray text-xl font-tiempos">Añadir al calendario</p>
             <div class="flex items-center justify-center">
                 <a href="https://www.addevent.com/calendar/aW483599+apple" title="Apple" target="_blank" style="display:inline;">
