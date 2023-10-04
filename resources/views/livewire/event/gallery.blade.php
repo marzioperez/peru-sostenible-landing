@@ -7,7 +7,7 @@
     <div class="container sm:pb-6 pb-10">
         <div class="columns-3xs">
             @foreach($photos as $p => $photo)
-                <div class="w-full aspect-video">
+                <div class="w-full aspect-video mb-3">
                     <img src="{{$photo['image_url']}}" class="w-full" />
                 </div>
             @endforeach
