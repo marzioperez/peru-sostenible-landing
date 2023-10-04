@@ -3,7 +3,7 @@
         <div class="sm:grid grid-cols-12 gap-6">
             <div class="col-span-12">
                 <div class="grid grid-cols-12">
-                    <div class="col-span-4 uppercase text-red text-sm font-semibold border-b-2 border-red">Nombre / Cargo</div>
+                    <div class="col-span-4 uppercase text-red text-sm font-semibold border-b-2 border-red">Bloque</div>
                     <div class="col-span-4 uppercase text-red text-sm font-semibold border-b-2 border-red">Tema</div>
                     <div class="col-span-3 uppercase text-red text-sm font-semibold border-b-2 border-red">Horario</div>
                     <div class="border-b-2 border-red"></div>
