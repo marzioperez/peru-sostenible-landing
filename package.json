@@ -20,7 +20,9 @@
         "@amcharts/amcharts5": "^5.4.1",
         "@splidejs/splide": "^4.1.4",
         "anychart": "^8.11.1",
+        "firebase": "^10.3.0",
         "jquery": "^3.7.0",
+        "masonry-layout": "^4.2.2",
         "slick-carousel": "^1.8.1"
     }
 }
