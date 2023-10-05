@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\EloquentSortable\Sortable;
+use Spatie\EloquentSortable\SortableTrait;
 
-class ScheduleActivity extends Model {
+class ScheduleActivity extends Model implements Sortable {
 
-    use SoftDeletes;
+    use SoftDeletes, SortableTrait;
     const SPEAKER = 'SPEAKER';
     const PANELIST_GROUP = 'PANELIST_GROUP';
 
@@ -22,7 +24,13 @@ class ScheduleActivity extends Model {
         'presentation_type',
         'speaker_id',
         'panelist_group_id',
-        'schedule_day_id'
+        'schedule_day_id',
+        'order'
+    ];
+
+    public $sortable = [
+        'order_column_name' => 'order',
+        'sort_when_creating' => true
     ];
 
     public function speaker(): HasOne {

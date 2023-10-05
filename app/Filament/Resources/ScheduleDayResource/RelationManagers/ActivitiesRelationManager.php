@@ -11,6 +11,7 @@ use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ActivitiesRelationManager extends RelationManager
@@ -61,11 +62,21 @@ class ActivitiesRelationManager extends RelationManager
                 Tables\Actions\CreateAction::make(),
             ])
             ->actions([
+                Tables\Actions\Action::make('up')
+                    ->icon('heroicon-o-arrow-up')->label('')
+                    ->action(fn (ScheduleActivity $record) => $record->moveOrderUp()),
+                Tables\Actions\Action::make('down')
+                    ->icon('heroicon-o-arrow-down')->label('')
+                    ->action(fn (ScheduleActivity $record) => $record->moveOrderDown()),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
+    }
+
+    protected function getTableQuery(): Builder|Relation {
+        return parent::getTableQuery()->ordered();
     }
 }
