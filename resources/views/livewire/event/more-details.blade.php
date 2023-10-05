@@ -56,7 +56,7 @@
                             </a>
                         </div>
                         <div>
-                            <a href="{{asset('pdf/guia-del-pasajero-1.pdf')}}" target="_blank">
+                            <a href="{{asset('pdf/guia-del-viajero-1.pdf')}}" target="_blank">
                                 <p class="mb-0"><b class="uppercase">Guía</b> de pasajero sostenible</p>
                             </a>
                         </div>
