@@ -51,7 +51,7 @@
                     <div class="col-span-2"></div>
                     <div class="col-span-8 w-full flex justify-center items-center sm:py-8 py-6 space-x-3">
                         <div>
-                            <a href="{{asset('pdf/guia-del-pasajero-1.pdf')}}" target="_blank">
+                            <a href="{{asset('pdf/guia-del-viajero-1.pdf')}}" target="_blank">
                                 <img src="{{asset('img/pdf.svg')}}" />
                             </a>
                         </div>
