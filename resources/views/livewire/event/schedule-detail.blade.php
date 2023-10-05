@@ -1,5 +1,5 @@
 <div class="sm:py-10 py-5">
-    @if(count($scheduleDay['activities']) > 0)
+    @if(count($activities) > 0)
         <div class="sm:grid grid-cols-12 gap-6">
             <div class="col-span-12">
                 <div class="grid grid-cols-12">
@@ -8,7 +8,7 @@
                     <div class="col-span-3 uppercase text-red text-sm font-semibold border-b-2 border-red">Horario</div>
                     <div class="border-b-2 border-red"></div>
                 </div>
-                @foreach($scheduleDay['activities'] as $activity)
+                @foreach($activities as $activity)
                     <div class="w-full">
                         <div class="sm:grid grid-cols-12">
                             <div class="col-span-4 border-b-2 border-red py-3">

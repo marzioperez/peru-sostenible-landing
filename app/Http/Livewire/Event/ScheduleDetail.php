@@ -2,23 +2,15 @@
 
 namespace App\Http\Livewire\Event;
 
-use App\Models\ScheduleDay;
+use App\Models\ScheduleActivity;
 use Livewire\Component;
 
 class ScheduleDetail extends Component {
 
-    public $scheduleDay;
+    public $activities;
 
     public function mount($schedule_day_id) {
-        $this->scheduleDay = ScheduleDay::with('activities.speaker')->find($schedule_day_id);
-    }
-
-    protected $listeners = [
-        'change_schedule_day' => 'changeScheduleDay'
-    ];
-
-    public function changeScheduleDay($id) {
-        $this->scheduleDay = ScheduleDay::with('activities.speaker', 'activities.panelist_group.speakers.speaker')->find($id);
+        $this->activities = ScheduleActivity::with('speaker')->where('schedule_day_id', $schedule_day_id)->ordered()->get();
     }
 
     public function render() {
