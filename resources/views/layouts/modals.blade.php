@@ -60,7 +60,7 @@
                                         <i class="fa-brands fa-facebook-f"></i>
                                     </a>
                                     <a href="#" class="modal-speaker-social-circle twitter" target="_blank">
-                                        <i class="fa-brands fa-twitter"></i>
+                                        <i class="fa-brands fa-x-twitter"></i>
                                     </a>
                                     <a href="#" class="modal-speaker-social-circle instagram" target="_blank">
                                         <i class="fa-brands fa-instagram"></i>
