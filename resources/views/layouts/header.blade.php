@@ -14,7 +14,7 @@
                 </a>
             </div>
             <div class="flex justify-end">
-                <button type="button" class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="login-modal">
+                <button type="button" class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="register-modal">
                     <span>Regístrate</span>
                     <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]" alt="Menu">
                 </button>
@@ -24,7 +24,7 @@
 </header>
 <div class="menu-side">
     <div class="menu-options {{$header_relative ? '' : ' pt-12'}}">
-        <button type="button" class="btn btn-red-outline flex justify-between uppercase mb-6 open-modal" data-modal="login-modal">
+        <button type="button" class="btn btn-red-outline flex justify-between uppercase mb-6 open-modal" data-modal="register-modal">
             <span>Regístrate</span>
             <img src="{{asset('img/icono-arrow-diagonal-right-red.svg')}}" class="ml-3 h-[15px]" alt="Menu">
         </button>
