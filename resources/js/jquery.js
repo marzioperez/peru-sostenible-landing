@@ -257,4 +257,22 @@ $(document).ready(function(){
     if ($('div.chat-content').length > 0) {
         moveChatScroll();
     }
+
+    $.fn.scrollDivToElement = function(childSel) {
+        if (! this.length) return this;
+        return this.each(function() {
+            let parentEl = $(this);
+            let childEl = childSel;
+            if (childEl.length > 0) {
+                parentEl.animate({
+                    scrollTop: parentEl.scrollTop() - parentEl.offset().top + childEl.offset().top - (parentEl.outerHeight() / 2) + (childEl.outerHeight() / 2)
+                }, 1000);
+            }
+        });
+    };
+
+    if ($('div.live-activities').length > 0) {
+        let activity_active = $('.activity.active');
+        $('div.live-activities').scrollDivToElement(activity_active);
+    }
 });

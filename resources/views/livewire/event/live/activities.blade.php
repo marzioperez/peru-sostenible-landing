@@ -9,7 +9,7 @@
             </div>
             <div class="live-activities">
                 @foreach($activities as $activity)
-                    <div class="activity">
+                    <div class="activity{{($activity['id'] . '' === $current_activity_id ? ' active' : '')}}">
                         <div class="col-span-4 border-b-2 border-red py-3">
                             @if($activity['presentation_type'] === \App\Models\ScheduleActivity::SPEAKER)
                                 @if($activity['speaker'])
@@ -44,7 +44,7 @@
                         <div class="col-span-3 flex items-center border-b-2 border-red py-3">
                             <p class="mb-0">{{date('h:i', strtotime($activity['start']))}} a {{date('h:i', strtotime($activity['end']))}}</p>
                         </div>
-                        <div class="flex items-center border-b-2 border-red py-3 activity-item activity-{{$activity['id']}}{{($activity['id'] . '' === $current_activity_id ? ' active' : '')}}">
+                        <div class="flex items-center border-b-2 border-red py-3 activity-item activity-{{$activity['id']}}">
                             @if($activity['id'] . '' === $current_activity_id)
                                 <div class="circle"></div>
                             @endif
@@ -65,9 +65,29 @@
             let channel = pusher.subscribe('activity');
             channel.bind('update-activity', function(data) {
                 $('.activity .activity-item').empty();
-                if($('.activity-item.activity-' + data).length > 0) {
-                    $('.activity-item.activity-' + data).html('<div class="circle"></div>')
+                $('.activity .activity-item').removeClass('active');
+                 let activity_item = $(`.activity-item.activity-${data}`);
+                if(activity_item.length > 0) {
+                    activity_item.html('<div class="circle"></div>').toggleClass('active');
+                    $('div.live-activities').scrollDivToElement(activity_item);
                 }
+
+                // $.fn.scrollDivToElement = function(childSel) {
+                //     if (! this.length) return this;
+                //
+                //     return this.each(function() {
+                //         let parentEl = $(this);
+                //         let childEl = parentEl.find(childSel);
+                //
+                //         if (childEl.length > 0) {
+                //             parentEl.animate({
+                //                 scrollTop: parentEl.scrollTop() - parentEl.offset().top + childEl.offset().top - (parentEl.outerHeight() / 2) + (childEl.outerHeight() / 2)
+                //             }, 1000);
+                //         }
+                //     });
+                // };
+
+
             });
         });
     </script>
