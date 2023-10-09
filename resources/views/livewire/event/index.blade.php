@@ -94,9 +94,9 @@
                     </div>
                 </a>
                 <div class="grid grid-cols-2 gap-6 mt-5">
-                    <div class="bg-[#F2C0D7] px-5 pt-6 pb-3 flex items-end sm:h-[215px] relative">
+                    <div class="bg-[#F2C0D7] zoom-content px-5 pt-6 pb-3 flex items-end sm:h-[215px] relative">
                         <div class="bg-red h-[15px] w-[15px] rounded-full absolute top-4 right-4"></div>
-                        <p class="font-bold text-[#921E4E] uppercase leading-none sm:text-6xl text-3xl mb-0">En<br class="hidden sm:block" /> vivo</p>
+                        <h1 class="font-bold text-[#921E4E] uppercase leading-none sm:text-6xl text-3xl mb-0">En<br class="hidden sm:block" /> vivo</h1>
                     </div>
                     <a href="{{route('videos')}}">
                         <div class="bg-[#25254E] zoom-content px-3 py-6 flex items-center justify-center sm:h-[215px]">

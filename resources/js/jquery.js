@@ -238,4 +238,23 @@ $(document).ready(function(){
         $('body').toggleClass('overflow-hidden');
         $("#" + $(this).data('modal')).show();
     });
+
+    function appendMessage(data) {
+        let message = '<div class="message">' +
+            '<div class="message-name">'+ data['name'] +'</div>' +
+            '<div class="message-text">'+ data['message'] +'</div>' +
+            '</div>';
+        $('div.chat-content').append(message);
+    }
+
+    function moveChatScroll() {
+        if ($('div.chat-content').length > 0) {
+            let height = $('div.chat-content')[0].scrollHeight;
+            $('div.chat-content').animate({scrollTop: height});
+        }
+    }
+
+    if ($('div.chat-content').length > 0) {
+        moveChatScroll();
+    }
 });

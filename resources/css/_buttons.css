@@ -306,3 +306,7 @@ button{
 .btn-social-menu {
     @apply border rounded-md text-red flex items-center justify-center text-lg border-red p-3 w-8 h-8 hover:bg-red hover:text-white;
 }
+
+.btn-send-message {
+    @apply absolute bottom-3 right-3 rounded-full bg-[#CCCCCC] text-white p-3;
+}

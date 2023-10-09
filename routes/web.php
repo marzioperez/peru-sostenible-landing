@@ -23,6 +23,7 @@ Route::get('/aliados', \App\Http\Livewire\Event\Allies::class)->name('allies');
 Route::get('/mas-detalles', \App\Http\Livewire\Event\MoreDetails::class)->name('more-details');
 Route::get('/revive-las-sesiones', \App\Http\Livewire\Event\Videos::class)->name('videos');
 Route::get('/galeria', \App\Http\Livewire\Event\Gallery::class)->name('gallery');
+Route::get('/en-vivo', \App\Http\Livewire\Event\Live\Index::class)->name('live');
 
 Route::get('/terminos-y-condiciones', \App\Http\Livewire\TermsAndConditions::class)->name('terms-and-conditions');
 Route::get('/politicas-de-privacidad', \App\Http\Livewire\PrivacyPolicies::class)->name('privacy-policies');
