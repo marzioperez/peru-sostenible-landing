@@ -11,7 +11,8 @@ class Question extends Model {
         'user_id',
         'question',
         'answer',
-        'admin_id'
+        'admin_id',
+        'schedule_activity_id'
     ];
 
     public function user(): HasOne {
@@ -20,5 +21,9 @@ class Question extends Model {
 
     public function admin(): HasOne {
         return $this->hasOne(Admin::class, 'id', 'admin_id');
+    }
+
+    public function activity(): HasOne {
+        return $this->hasOne(ScheduleActivity::class, 'id', 'schedule_activity_id');
     }
 }

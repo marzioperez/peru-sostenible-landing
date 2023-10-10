@@ -14,10 +14,14 @@
                 </a>
             </div>
             <div class="flex justify-end">
-                <button type="button" class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="register-modal">
-                    <span>Regístrate</span>
-                    <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]" alt="Menu">
-                </button>
+                @auth()
+                    <x-auth-header />
+                @else
+                    <button type="button" class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="register-modal">
+                        <span>Regístrate</span>
+                        <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]" alt="Menu">
+                    </button>
+                @endauth
             </div>
         </div>
     </div>

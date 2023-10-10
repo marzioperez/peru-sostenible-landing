@@ -168,6 +168,14 @@ button{
 }
 
 /* Outline buttons */
+.btn-red-outline {
+    @apply border border-red bg-white shadow-sm text-red;
+}
+
+.btn-red-outline:hover {
+    @apply bg-red-dark text-white;
+}
+
 .btn-primary-outline {
     @apply border border-primary bg-white shadow-sm text-primary;
 }

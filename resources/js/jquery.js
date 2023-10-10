@@ -77,6 +77,12 @@ $(document).ready(function(){
         $(".modal").hide();
     });
 
+    $('.toggle-auth-forms').on('click', function (e) {
+        e.preventDefault();
+        $(".modal").hide();
+        $('#register-modal').show();
+    });
+
     $('.panelist-group-header .show').on('click', function (e) {
         e.preventDefault();
         let id = $(this).data('id');

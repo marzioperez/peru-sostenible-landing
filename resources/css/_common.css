@@ -251,6 +251,18 @@ ul {
     animation: circle 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
 }
 
+.login-message {
+    @apply flex items-center justify-center h-full text-center;
+}
+
+.unavailable-box {
+    @apply bg-gray-50 border border-gray-400 flex items-center justify-center;
+}
+
+.unavailable-box i {
+    @apply text-6xl text-gray-400;
+}
+
 @keyframes move-forever {
     0% {
         transform: translate3d(-90px, 0, 0);

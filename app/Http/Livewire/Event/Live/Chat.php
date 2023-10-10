@@ -10,20 +10,24 @@ use Pusher\Pusher;
 class Chat extends Component {
 
     public string $user;
-    public string $message;
+    public $message;
     public $messages = [];
+    public $loggedIn = false;
+
+    public function mount($loggedIn) {
+        $this->loggedIn = $loggedIn;
+    }
 
     protected $listeners = [
         'get_messages' => 'getMessages'
     ];
-
 
     public function getMessages(): void {
         $this->messages = Message::get()->take(50);
     }
 
     public function sendMessage() {
-        if ($this->message !== "") {
+        if ($this->message !== "" && !is_null($this->message) && $this->loggedIn) {
             $options = array(
                 'cluster' => 'us2',
                 'useTLS' => true
@@ -35,7 +39,7 @@ class Chat extends Component {
                 '1457807',
                 $options);
 
-            $data['name'] = 'Ismael Perez';
+            $data['name'] = auth()->user()->full_name;
             $data['message'] = $this->message;
             $this->message = '';
             Message::create($data);

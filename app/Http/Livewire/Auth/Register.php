@@ -3,7 +3,9 @@
 namespace App\Http\Livewire\Auth;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Route;
 use Livewire\Component;
 
 class Register extends Component {
@@ -13,6 +15,11 @@ class Register extends Component {
     public $commitments_options = User::COMMITMENTS;
     public $show_thanks = false;
     public $error_commitments = null;
+    public bool $in_live;
+
+    public function mount($in_live) {
+        $this->in_live = $in_live;
+    }
 
     protected $rules = [
         'first_name' => 'required',
@@ -55,6 +62,12 @@ class Register extends Component {
             'accept_terms' => $this->accept_terms,
             'accept_policy_data' => $this->accept_policy_data
         ]);
+
+        if ($this->in_live) {
+            if (Auth::attempt(['email' => $this->email, 'password' => '123456'])){
+                redirect()->route('live');
+            }
+        }
 
         $this->show_thanks = true;
     }

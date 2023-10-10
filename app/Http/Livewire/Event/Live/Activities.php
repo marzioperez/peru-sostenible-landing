@@ -11,6 +11,11 @@ class Activities extends Component {
 
     public $activities = [];
     public $current_activity_id = null;
+    public $loggedIn = false;
+
+    public function mount($loggedIn) {
+        $this->loggedIn = $loggedIn;
+    }
 
     public function render() {
         // $current_day = ScheduleDay::whereDate('schedule_date', now())->get()->first();

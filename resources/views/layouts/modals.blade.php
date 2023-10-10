@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="modal-body">
-                <livewire:auth.register />
+                <livewire:auth.register :in_live="\Illuminate\Support\Facades\Route::is('live')" />
             </div>
         </div>
     </div>

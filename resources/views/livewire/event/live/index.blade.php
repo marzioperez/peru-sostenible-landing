@@ -7,13 +7,13 @@
     <div class="container sm:pb-10 pb-6">
         <div class="sm:grid grid-cols-12 gap-5">
             <div class="col-span-8">
-                <livewire:event.live.video />
-                <livewire:event.live.activities />
+                <livewire:event.live.video :logged-in="$loggedIn" />
+                <livewire:event.live.activities :logged-in="$loggedIn" />
             </div>
             <div class="col-span-4">
-                <livewire:event.live.chat />
+                <livewire:event.live.chat :logged-in="$loggedIn" />
                 <div class="mt-5">
-                    <livewire:event.live.question />
+                    <livewire:event.live.question :logged-in="$loggedIn" />
                 </div>
             </div>
         </div>

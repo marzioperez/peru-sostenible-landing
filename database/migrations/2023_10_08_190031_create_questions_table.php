@@ -17,6 +17,7 @@ return new class extends Migration
             $table->longText('answer')->nullable()->default(null);
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('admin_id')->nullable()->default(null);
+            $table->unsignedInteger('schedule_activity_id')->nullable()->default(null);
             $table->softDeletes();
             $table->timestamps();
         });

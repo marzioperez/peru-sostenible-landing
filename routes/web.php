@@ -28,3 +28,11 @@ Route::get('/en-vivo', \App\Http\Livewire\Event\Live\Index::class)->name('live')
 Route::get('/terminos-y-condiciones', \App\Http\Livewire\TermsAndConditions::class)->name('terms-and-conditions');
 Route::get('/politicas-de-privacidad', \App\Http\Livewire\PrivacyPolicies::class)->name('privacy-policies');
 Route::get('/politica-de-tratamiento-de-proteccion-de-datos-personales', \App\Http\Livewire\PersonalProtectionData::class)->name('personal-protection-data');
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/mis-preguntas', \App\Http\Livewire\User\Questions::class)->name('my-questions');
+    Route::get('/salir', function (){
+        auth()->logout();
+        return redirect()->route('home');
+    })->name('user-logout');
+});
