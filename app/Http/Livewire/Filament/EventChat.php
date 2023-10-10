@@ -1,20 +1,15 @@
 <?php
 
-namespace App\Http\Livewire\Event\Live;
+namespace App\Http\Livewire\Filament;
 
 use App\Models\Message;
 use Livewire\Component;
 use Pusher\Pusher;
 
-class Chat extends Component {
+class EventChat extends Component {
 
     public $message;
     public $messages = [];
-    public $loggedIn = false;
-
-    public function mount($loggedIn) {
-        $this->loggedIn = $loggedIn;
-    }
 
     protected $listeners = [
         'get_messages' => 'getMessages'
@@ -25,7 +20,7 @@ class Chat extends Component {
     }
 
     public function sendMessage() {
-        if ($this->message !== "" && !is_null($this->message) && $this->loggedIn) {
+        if ($this->message !== "" && !is_null($this->message)) {
             $options = array(
                 'cluster' => 'us2',
                 'useTLS' => true
@@ -37,7 +32,7 @@ class Chat extends Component {
                 '1457807',
                 $options);
 
-            $data['name'] = auth()->user()->full_name;
+            $data['name'] = auth()->user()->name;
             $data['message'] = $this->message;
             $this->message = '';
             Message::create($data);
@@ -47,6 +42,6 @@ class Chat extends Component {
 
     public function render() {
         $this->messages = Message::get()->take(50);
-        return view('livewire.event.live.chat');
+        return view('livewire.filament.event-chat');
     }
 }
