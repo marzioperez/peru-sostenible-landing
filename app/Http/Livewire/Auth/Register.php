@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire\Auth;
 
+use App\Models\LoginLog;
 use App\Models\User;
+use App\Settings\GeneralSettings;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
@@ -65,6 +67,10 @@ class Register extends Component {
 
         if ($this->in_live) {
             if (Auth::attempt(['email' => $this->email, 'password' => '123456'])){
+                LoginLog::create([
+                    'user_id' => auth()->user()->id,
+                    'schedule_activity_id' => app(GeneralSettings::class)->current_activity_id
+                ]);
                 redirect()->route('live');
             }
         }
