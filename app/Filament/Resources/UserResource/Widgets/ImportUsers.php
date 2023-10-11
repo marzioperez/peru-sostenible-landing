@@ -7,4 +7,5 @@ use Filament\Widgets\Widget;
 class ImportUsers extends Widget
 {
     protected static string $view = 'filament.resources.user-resource.widgets.import-users';
+    protected int | string | array $columnSpan = 'full';
 }

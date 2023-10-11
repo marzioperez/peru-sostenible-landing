@@ -44,13 +44,6 @@ class UserResource extends Resource
                         Forms\Components\TextInput::make('email')->email()->required()
                             ->unique(ignorable: fn($record) => $record )
                             ->label('E-mail')->columnSpan(['sm' => 1, 'xl' => 4]),
-//                        Forms\Components\TextInput::make('password')
-//                            ->password()
-//                            ->dehydrateStateUsing(fn($state) => Hash::make($state))
-//                            ->dehydrated(fn($state) => filled($state))
-//                            ->required(fn(Page $livewire) => ($livewire instanceof CreateRecord))
-//                            ->label('Contraseña')
-//                            ->columnSpan(['sm' => 1, 'xl' => 4]),
                         Forms\Components\TagsInput::make('commitments')->label('Compromisos')->suggestions([
                             'Resiliencia', 'Respeto', 'Tolerancia', 'Esfuerzo', 'Empatía', 'Transparencia', 'Sostenibilidad', 'Colaboración'
                         ])->columnSpan(['sm' => 1, 'xl' => 12])

@@ -24,9 +24,14 @@ class ImportUsers extends Component {
         return redirect()->to('/admin/users');
     }
 
-    public function export() {
+    public function export_users() {
         $time = time();
         return Excel::download(new \App\Exports\Users(), "usuarios-{$time}.xlsx");
+    }
+
+    public function export_logins() {
+        $time = time();
+        return Excel::download(new \App\Exports\LoginLogs(), "logins-{$time}.xlsx");
     }
 
     public function render() {
