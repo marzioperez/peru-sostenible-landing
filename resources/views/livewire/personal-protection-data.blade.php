@@ -9,7 +9,7 @@
             <p><b>COMUNICACIÓN POR TRANSFERENCIA DE DATOS PERSONALES</b></p>
             <p>Cien Pies Producciones SAC respeta la privacidad de sus Usuarios, no compartiremos su información con terceros si usted no desea expresamente que lo hagamos, salvo en el caso la empresa organizadora del evento, esto es PERU 2021 UNA NUEVA VISIÓN identificada con RUC 20265621806 domiciliada en pasaje Mirabel 155, distrito de Chorrillos, provincia y departamento de Lima, cuya política de privacidad se encuentra disponible en este link. Se compartirán los datos personales con esta asociación por ser estrictamente necesario para la ejecución del evento:</p>
             <p><b>Anexo 2 - Tratamiento de datos personales para finalidades adicionales</b></p>
-            <p>Compartir sus datos personales con compañías vinculadas a PERÚ 2021 para contactarlo con el propósito de invitarlo a participar de programas o eventos de su interés;</p>
+            <p>Compartir sus datos personales con compañías vinculadas a PERÚ 2021 para contactarlo con el propósito de invitarlo a participar de programas o  eventos de su interés; sorteos varios, así como el uso de su imagen para generar y/o difundir contenido multimedia del evento "Perú Sostenible En Vivo".</p>
 
             <table>
                 <tbody>
