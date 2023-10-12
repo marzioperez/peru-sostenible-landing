@@ -17,7 +17,7 @@
                 @auth()
                     <x-auth-header />
                 @else
-                    <button type="button" class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="register-modal">
+                    <button type="button" disabled class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="register-modal">
                         <span>Regístrate</span>
                         <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]" alt="Menu">
                     </button>
@@ -28,7 +28,7 @@
 </header>
 <div class="menu-side">
     <div class="menu-options {{$header_relative ? '' : ' pt-12'}}">
-        <button type="button" class="btn btn-red-outline flex justify-between uppercase mb-6 open-modal" data-modal="register-modal">
+        <button type="button" disabled class="btn btn-red-outline flex justify-between uppercase mb-6 open-modal" data-modal="register-modal">
             <span>Regístrate</span>
             <img src="{{asset('img/icono-arrow-diagonal-right-red.svg')}}" class="ml-3 h-[15px]" alt="Menu">
         </button>
@@ -39,8 +39,7 @@
         <p><a href="{{route('more-details')}}" class="menu-option">Más detalles</a></p>
         <p><a href="{{route('speakers')}}" class="menu-option">Expositores</a></p>
         <p><a href="{{route('allies')}}" class="menu-option">Aliados</a></p>
-        <p><a href="#" class="menu-option">En vivo</a></p>
-{{--        <p class="py-3"><a href="{{route('home')}}" class="btn-live">En vivo</a></p>--}}
+        <p class="py-3"><a href="{{route('live')}}" class="btn-live">En vivo</a></p>
         <p><a href="{{route('videos')}}" class="menu-option">Revive las sesiones</a></p>
         <p><a href="{{route('gallery')}}" class="menu-option">Galería</a></p>
     </div>

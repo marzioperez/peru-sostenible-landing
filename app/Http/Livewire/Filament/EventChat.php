@@ -40,6 +40,25 @@ class EventChat extends Component {
         }
     }
 
+    public function deleteMessage($id) {
+        $message = Message::find($id);
+        if ($message) {
+            $message->delete();
+        }
+        $options = array(
+            'cluster' => 'us2',
+            'useTLS' => true
+        );
+
+        $pusher = new Pusher(
+            '8b317cc8640c671a3803',
+            '75abebe78a8abe779a77',
+            '1457807',
+            $options);
+        $data['name'] = auth()->user()->name;
+        $pusher->trigger('chat', 'send-message', $data);
+    }
+
     public function render() {
         $this->messages = Message::get()->take(50);
         return view('livewire.filament.event-chat');

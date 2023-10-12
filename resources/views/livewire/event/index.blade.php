@@ -72,7 +72,7 @@
 
     <div class="py-5 my-5 bg-no-repeat bg-cover bg-center flex items-center justify-center space-x-6" style="background-image: url({{asset('img/bg-sections.png')}})">
         <h1 class="font-tiempos text-white sm:text-6xl text-xl">¡Súmate al evento!</h1>
-        <button type="button" class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="register-modal">
+        <button type="button" disabled class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="register-modal">
             <span>Regístrate</span>
             <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]">
         </button>
@@ -94,10 +94,12 @@
                     </div>
                 </a>
                 <div class="grid grid-cols-2 gap-6 mt-5">
-                    <div class="bg-[#F2C0D7] zoom-content px-5 pt-6 pb-3 flex items-end sm:h-[215px] relative">
-                        <div class="bg-red h-[15px] w-[15px] rounded-full absolute top-4 right-4"></div>
-                        <h1 class="font-bold text-[#921E4E] uppercase leading-none sm:text-6xl text-3xl mb-0">En<br class="hidden sm:block" /> vivo</h1>
-                    </div>
+                    <a href="{{route('live')}}">
+                        <div class="bg-[#F2C0D7] zoom-content px-5 pt-6 pb-3 flex items-end sm:h-[215px] relative">
+                            <div class="bg-red h-[15px] w-[15px] rounded-full absolute top-4 right-4"></div>
+                            <h1 class="font-bold text-[#921E4E] uppercase leading-none sm:text-6xl text-3xl mb-0">En<br class="hidden sm:block" /> vivo</h1>
+                        </div>
+                    </a>
                     <a href="{{route('videos')}}">
                         <div class="bg-[#25254E] zoom-content px-3 py-6 flex items-center justify-center sm:h-[215px]">
                             <h2 class="text-white uppercase leading-none sm:text-4xl text-xl mb-0">Revive las <br class="hidden sm:block" /><b>sesiones</b></h2>

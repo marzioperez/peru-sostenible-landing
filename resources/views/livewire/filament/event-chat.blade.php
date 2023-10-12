@@ -2,9 +2,14 @@
     <div class="w-full">
         <div class="overflow-y-scroll border-l border-r chat-content" style="height: 300px;">
             @foreach ($messages as $message)
-                <div class="p-3 rounded-md" style="background-color: rgba(255,255,255,0.3); margin-bottom: 10px;">
+                <div class="p-3 rounded-md relative" style="background-color: rgba(255,255,255,0.3); margin-bottom: 10px;">
                     <div class="font-semibold">{{$message['name']}}</div>
                     <div>{{$message['message']}}</div>
+                    <button wire:click.prevent="deleteMessage({{$message['id']}})" class="absolute top-3 right-3 filament-link inline-flex items-center justify-center gap-0.5 font-medium outline-none hover:underline focus:underline text-sm text-danger-600 hover:text-danger-500 dark:text-danger-500 dark:hover:text-danger-400 filament-tables-link-action">
+                        <svg class="filament-link-icon w-4 h-4 mr-1 rtl:ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
                 </div>
             @endforeach
         </div>
