@@ -12,7 +12,7 @@
             <td>{{$log['user']['first_name']}}</td>
             <td>{{$log['user']['last_name']}}</td>
             <td>{{$log['user']['email']}}</td>
-            <td>{{$log['activity']['title']}}</td>
+            <td>{{($log['activity'] ? $log['activity']['title'] : '-')}}</td>
             <td>{{date("d/m/Y H:i", strtotime($log['created_at']))}}</td>
         </tr>
     @endforeach
