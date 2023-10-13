@@ -25,8 +25,7 @@ class GeneralSettings extends SettingsPage
 
     protected function getFormSchema(): array {
         $activities = new Collection();
-        // $current_day = ScheduleDay::whereDate('schedule_date', now())->get()->first();
-        $current_day = ScheduleDay::get()->first();
+        $current_day = ScheduleDay::whereDate('schedule_date', now())->get()->first();
         if ($current_day) {
             $schedule_activities = ScheduleActivity::where('schedule_day_id', $current_day->id)->get();
             foreach ($schedule_activities as $schedule_activity) {

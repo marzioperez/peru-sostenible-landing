@@ -18,8 +18,7 @@ class Activities extends Component {
     }
 
     public function render() {
-        // $current_day = ScheduleDay::whereDate('schedule_date', now())->get()->first();
-        $current_day = ScheduleDay::get()->first();
+        $current_day = ScheduleDay::whereDate('schedule_date', now())->get()->first();
         if ($current_day) {
             $this->activities = ScheduleActivity::with('speaker', 'panelist_group')->where('schedule_day_id', $current_day->id)->get();
         }
