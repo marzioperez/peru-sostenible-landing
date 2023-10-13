@@ -72,7 +72,7 @@
 
     <div class="py-5 my-5 bg-no-repeat bg-cover bg-center flex items-center justify-center space-x-6" style="background-image: url({{asset('img/bg-sections.png')}})">
         <h1 class="font-tiempos text-white sm:text-6xl text-xl">¡Súmate al evento!</h1>
-        <button type="button" disabled class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="register-modal">
+        <button type="button" class="btn btn-white-outline flex justify-between uppercase open-modal" data-modal="register-modal">
             <span>Regístrate</span>
             <img src="{{asset('img/icono-arrow-diagonal-right-white.svg')}}" class="ml-3 h-[15px]">
         </button>
