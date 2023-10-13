@@ -40,6 +40,7 @@ class GeneralSettings extends SettingsPage
                     'xl' => 12,
                     '2xl' => 12
                 ])->schema([
+                    Forms\Components\Toggle::make('enable_register')->inline(false)->label('Habilitar registro')->columnSpanFull(),
                     Select::make('current_activity_id')->label('Actividad en curso')->options($activities)->columnSpanFull(),
                     Forms\Components\Toggle::make('show_countdown')->inline(false)->label('Mostrar cuenta regresiva')->columnSpan(4),
                     Forms\Components\DateTimePicker::make('end_date_countdown')->label('Fecha de fin de cuenta regresiva')->columnSpan(8),

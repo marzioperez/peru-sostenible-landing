@@ -12,6 +12,7 @@ class GeneralSettings extends Settings {
     public $end_date_countdown;
     public $show_users_number;
     public $users_default_number;
+    public bool $enable_register;
 
 
     public static function group(): string {
